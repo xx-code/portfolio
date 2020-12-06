@@ -8,9 +8,13 @@ const Router = () => {
     return(
         <>
             <Navbar />
-            <Switch>
-                <Route path="/" component={Home} />
-            </Switch>
+            <div id="page-content">
+                <div className="container-fluid">
+                    <Switch>
+                        <Route path="/" component={Home} />
+                    </Switch>
+                </div>
+            </div>
         </>
     )
 }

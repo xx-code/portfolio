@@ -1,0 +1,70 @@
+@import '../../colors.scss';
+
+#navbar {
+    background-color: $high-dark;
+    width: 90px;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+}
+
+.logo {
+    height: 90px;
+    width: 100%;
+    background-color: $black;
+    .wrapper-logo {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        height: 100%;
+        img {
+            height: 65px;
+        }
+    }
+}
+
+.navbar-items {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navbar-items-wrapper {
+        padding: 10px 5px;
+        margin: 0;
+        list-style-type: none;
+        .navlink {
+            a {
+                text-decoration: none;
+                .navlink-wrapper {
+                    text-align: center;
+                    color: $high-gray;
+                    margin-bottom: 42px;
+                    margin-top: 42px;
+                    ion-icon {
+                        font-size: 50px;
+                    }
+                    p {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        margin: 0;
+                        display: none;
+                        text-transform: uppercase;
+                    }
+                    &:hover {
+                        color: $blue;
+                        p {
+                            display: block;
+                        }
+                    }   
+                }
+                .active {
+                    color: $blue !important;
+                    p {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
