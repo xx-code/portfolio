@@ -1,0 +1,22 @@
+@import '../../colors.scss';
+
+.toggle-language {
+    .toggle-language-wrapper {
+        .active {
+            color: $white;
+        }
+        button {
+            border: none;
+            background: none;
+            color: $high-gray;
+            font-size: 18px;
+            font-weight: bold;
+            &:focus {
+                outline: none;
+            }
+        }
+        span { 
+            color: $gray;
+        }
+    }
+}
