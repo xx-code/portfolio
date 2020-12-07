@@ -8,7 +8,7 @@ const switchColor = (letter, targetLetters) => {
             return targetLetters[i].style
         }
     };
-    return 'ff'
+    return ''
 };
 
 const LettersDisplaying = ({letters, highLetters = []}) => {
