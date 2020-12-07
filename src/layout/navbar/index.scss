@@ -1,5 +1,17 @@
 @import '../../colors.scss';
 
+@mixin rotate-animation($duration, $itiration) {
+    $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $itiration;
+}
+
 #navbar {
     background-color: $high-dark;
     width: 90px;
@@ -9,7 +21,7 @@
     @media (max-width: 768px) {
         height: 70px;
         width: 100%;
-        position: absolute;
+        position: relative;
         top: 0;
     }
 }
@@ -18,6 +30,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 4;
     .logo {
         height: 90px;
         width: 100%;
@@ -34,6 +47,10 @@
             height: 100%;
             img {
                 height: 65px;
+                @include rotate-animation(2s, 1) {
+                    from { transform: rotate(0deg); }
+                    to {transform: rotate(360deg);}
+                }
                 @media (max-width: 768px) {
                     height: 45px;
                 }
@@ -121,6 +138,7 @@
                 .navlink-wrapper {
                     text-align: center;
                     color: $high-gray;
+                    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
                     margin-bottom: 42px;
                     margin-top: 42px;
                     ion-icon {
@@ -129,22 +147,22 @@
                     p {
                         font-style: normal;
                         font-weight: bold;
-                        font-size: 14px;
+                        font-size: 0;
+                        transition: font-size cubic-bezier(0.19, 1, 0.22, 1) 150ms;
                         margin: 0;
-                        display: none;
                         text-transform: uppercase;
                     }
                     &:hover {
                         color: $blue;
                         p {
-                            display: block;
+                            font-size: 14px;
                         }
                     }   
                 }
                 .active {
                     color: $blue !important;
                     p {
-                        display: block;
+                        font-size: 14px;
                     }
                 }
             }
@@ -153,20 +171,28 @@
 }
 
 .navbar-items-responsive {
-    display: none;
+    position: absolute;
+    left: -15000px;
+    z-index: -2;
+    transition: left cubic-bezier(1, 0, 0, 1) 350ms;
+    width: 100%;
     .navbar-items-wrapper {
+        z-index: -2;
         list-style-type: none;
         display: flex;
+        
         justify-content: space-around;
         background-color: $high-dark;
         border-top: solid 1px $high-gray;
         padding: 10px 0;
         .navlink {
             a {
+                z-index: -2;
                 text-decoration: none;
                 .navlink-wrapper {
                     text-align: center;
                     color: $high-gray;
+                    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
                     p {
                         display: none;
                     }

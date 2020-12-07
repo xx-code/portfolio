@@ -15,7 +15,7 @@ const Navbar = () => {
     const displayNavItems = (canDisplay) => {
         const navbarItemsResponsive = document.getElementById('navbar-items-behavior');
         const hambugerElement = document.getElementById('hamburger-element');
-        navbarItemsResponsive.style.display = canDisplay ? 'block' : 'none';
+        navbarItemsResponsive.style.left = canDisplay ? '0' : '-15000px';
         hambugerElement.classList.remove(canDisplay ? 'bar' : 'close');
         hambugerElement.classList.add(canDisplay ? 'close' : 'bar');
         setCanDisplayNavItems(!canDisplay);
