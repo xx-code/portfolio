@@ -37,33 +37,33 @@ const Welcome = () => {
     return (
         <div className="welcome">
             <div className="welcome-wrapper">
-                <p>
+                <div className="para">
                    {
                        <LettersDisplaying letters={paragraph1} />
                    }
                    <span className="letter">,</span>
-                </p>
-                <p>
+                </div>
+                <div className="para">
                     {
                         <LettersDisplaying 
                             letters={paragraph2}
                             highLetters={[{letter: 'A', style: 'blue-letter'}]} />
                     }
-                </p>
-                <p>
+                </div>
+                <div className="para">
                     {
                         <LettersDisplaying 
                             letters={paragraph3} 
                             highLetters={[{letter: 'T', style: 'pink-letter'}, {letter: 'F', style: 'blue-letter'}]} />
                     }
-                </p>
-                <p>
+                </div>
+                <div className="para">
                     {
                         <LettersDisplaying 
                             letters={paragraph4}
                             highLetters={[{letter: 'D', style: 'pink-letter'}]} />
-                    }.
-                </p>
+                    }<span className="letter">.</span>
+                </div>
             </div>
             <p className="job-info">
                 {t('job_info')}

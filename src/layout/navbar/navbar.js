@@ -40,8 +40,8 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="hamburger-btn">
-                    <div className="hamburger-btn-wrapper">
-                        <div id="hamburger-element" className="bar" onClick={() => handleHambugerElement()} ></div>
+                    <div className="hamburger-btn-wrapper"  onClick={() => handleHambugerElement()}>
+                        <div id="hamburger-element" className="bar" ></div>
                     </div>
                 </div>
             </div>

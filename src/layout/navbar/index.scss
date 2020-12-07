@@ -15,8 +15,8 @@
 #navbar {
     background-color: $high-dark;
     width: 90px;
-    height: 100%;
     position: fixed;
+    height: 100%;
     z-index: 5;
     @media (max-width: 768px) {
         height: 70px;
@@ -197,7 +197,7 @@
                         display: none;
                     }
                     ion-icon {
-                        font-size: 50px;
+                        font-size: 42px;
                     }
                     &:hover {
                         color: $blue;

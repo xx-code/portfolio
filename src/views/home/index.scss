@@ -1,50 +1,176 @@
 @import '../../colors.scss';
 
+@mixin rotate-logo($duration, $itiration) {
+    $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $itiration;
+}
+
+
 #home {
+    flex: 1;
     height: 100%;
-    .content {
-        margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content-left{
         display: flex;
-        align-items: center;
-        .btn-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px;
+    }
+    .btn-wrapper {
+        margin-top: 34px;
+        .contact-btn {
+            border: 1px solid $blue;
+            &:hover {
+                border-color: $high-gray;
+                color: $high-gray;
+            }
+        }
+    }
+    
+    .welcome {
+        .welcome-wrapper {
+            
+            .para {
+                line-height: 53px;
+                margin-bottom: 0;
+                width: fit-content;
+                cursor: default;
+                position: relative;
+                .letter {
+                    position: relative;
+                    color: $white;
+                    font-weight: bolder;
+                    font-size: 4.15rem;
+                    top: 0;
+                    transition: top cubic-bezier(.17,.67,.83,.67) 200ms;
+                    &:hover {
+                      top: 8px;
+                      color: $blue;
+                    }
+                    @media (max-width: 1199px) {
+                        font-size: 3.75rem;
+                    }
+                    @media (max-width: 1029px) {
+                        font-size: 3.25rem;
+                        line-height: 48px;
+                    }
+                    @media (max-width: 998px) {
+                        font-size: 2.75rem;
+                        line-height: 43px;
+                    }
+                    @media (max-width: 796px) {
+                        font-size: 2.50rem;
+                        line-height: 38px;
+                    }
+                    @media (max-width: 750px) {
+                        font-size: 2.25rem;
+                        line-height: 33px;
+                    }
+                    @media (max-width: 450px) {
+                        font-size: 2rem;
+                        line-height: 28px;
+                    }
+                }
+                @media (max-width: 1029px) {
+                    line-height: 48px;
+                }
+                @media (max-width: 991px) {
+                    line-height: 43px;
+                }
+                @media (max-width: 796px) {
+                    line-height: 38px;
+                }
+                @media (max-width: 750px) {
+                    line-height: 33px;
+                }
+                @media (max-width: 450px) {
+                    line-height: 28px;
+                }
+                .blue-letter {
+                    color: $blue !important;
+                }
+                .pink-letter {
+                    color: $pink !important;
+                }
+            }
+        }
+        .job-info {
+            color: $high-gray;
+            font-size: 18px;
+            margin-bottom: 0;
             margin-top: 34px;
-            .contact-btn {
-                border: 1px solid $blue;
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+    .logo-wrapper {
+        width: 400px;
+        @media (max-width: 1299px) {
+            width: 350px;
+        }
+        @media (max-width: 1146px) {
+            width: 320px;
+        }
+        @media (max-width: 1103px) {
+            width: 275px;
+        }
+        @media (max-width: 992px) {
+            width: 225px;
+        }
+        @media (max-width: 851px) {
+            width: 200px;
+        }
+        @media (max-width: 793px) {
+            width: 180px;
+        }
+        
+        img {
+            width: 100%;
+            transform: rotate(-17deg);
+            margin-left: -15px;
+            margin-top: -55px;
+            @include rotate-logo(2s, 1) {
+                from {
+                    transform: rotate(0deg) scaleX(1.5) scaleY(1.5);
+                }
+                to {
+                    transform: rotate(343deg) scaleX(1) scaleY(1);
+                }
+            }
+            @media (max-width: 1299px) {
+                margin-left: -15px;
+            }
+            @media (max-width: 1146px) {
+            }
+            @media (max-width: 1103px) {
+                margin-top: -52px;
+            }
+            @media (max-width: 992px) {
+                margin-top: -45px;
+                margin-left: -25px;
+            }
+            @media (max-width: 851px) {
+                margin-top: -40px;
+                margin-left: -30px;
+            }
+            @media (max-width: 793px) {
+                margin-left: -55px;
+            }
+            @media (max-width: 769px) {
+                display: none;
             }
         }
         
-        .welcome {
-            .welcome-wrapper {
-                p {
-                    line-height: 53px;
-                    margin-bottom: 0;
-                    .letter {
-                        color: $white;
-                        font-weight: bolder;
-                        font-size: 68px;
-                    }
-                    .blue-letter {
-                        color: $blue !important;
-                    }
-                    .pink-letter {
-                        color: $pink !important;
-                    }
-                }
-            }
-            .job-info {
-                color: $high-gray;
-                font-size: 18px;
-                margin-bottom: 0;
-                margin-top: 34px;
-            }
-        }
-        .logo-wrapper {
-            height: 700px;
-            img {
-                height: 100%;
-                transform: rotate(-17deg);
-            }
-            
-        }
     }
+    
 }
