@@ -2,7 +2,7 @@
     "welcom" : "Setup my first change i18next",
     "home": "Home",
     "about_me": "About Me",
-    "skill": "Skills",
+    "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",
     "hello": "Hi",
@@ -10,5 +10,5 @@
     "name_job": "Tiemele Fullstack",
     "job": "Developer",
     "job_info": "Fullstack Developer / Android Developer / Freelancer",
-    "contact_me": "Contactez Moi"
+    "contact_me": "Contactez Me"
 }

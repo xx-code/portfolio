@@ -1,0 +1,14 @@
+{
+    "welcom" : "mon premier projet i18next",
+    "home": "Accueil",
+    "about_me": "Au sujet de moi",
+    "skills": "Skills",
+    "projects": "Projets",
+    "contact": "Contact",
+    "hello": "Salut",
+    "my_name": "Je suis Auguste",
+    "name_job": "Tiemele Fullstack",
+    "job": "Développeur",
+    "job_info": "Fullstack Développeur / Android Développeur / Freelancer",
+    "contact_me": "Contactez Moi"
+}
