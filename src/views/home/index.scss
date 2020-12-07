@@ -1,1 +1,50 @@
 @import '../../colors.scss';
+
+#home {
+    height: 100%;
+    .content {
+        margin-top: 5em;
+        display: flex;
+        align-items: center;
+        .btn-wrapper {
+            margin-top: 34px;
+            .contact-btn {
+                border: 1px solid $blue;
+            }
+        }
+        
+        .welcome {
+            .welcome-wrapper {
+                p {
+                    line-height: 53px;
+                    margin-bottom: 0;
+                    .letter {
+                        color: $white;
+                        font-weight: bolder;
+                        font-size: 68px;
+                    }
+                    .blue-letter {
+                        color: $blue !important;
+                    }
+                    .pink-letter {
+                        color: $pink !important;
+                    }
+                }
+            }
+            .job-info {
+                color: $high-gray;
+                font-size: 18px;
+                margin-bottom: 0;
+                margin-top: 34px;
+            }
+        }
+        .logo-wrapper {
+            height: 700px;
+            img {
+                height: 100%;
+                transform: rotate(-17deg);
+            }
+            
+        }
+    }
+}

@@ -23,17 +23,17 @@ const Navbar = () => {
                         text={t('home')} 
                         icon="home-outline"
                         link="/"
-                        selected={ currentLocation === '/'} />
+                        selected={ currentLocation === '/' } />
                     <NavLink 
                         text={t('about_me')}
                         icon="person-outline"
                         link="/about" 
-                        selected={ currentLocation === '/about'} />
+                        selected={ currentLocation === '/about' } />
                     <NavLink 
                         text={t('skills')}
                         icon="settings-outline"
                         link="/skills" 
-                        selected={ currentLocation === '/skills'} />
+                        selected={ currentLocation === '/skills' } />
                     <NavLink 
                         text={t('projects')} 
                         icon="document-outline"
@@ -43,7 +43,7 @@ const Navbar = () => {
                         text={t('contact')}
                         icon="mail-outline" 
                         link="/contact" 
-                        selected={ currentLocation === '/contact'} />
+                        selected={ currentLocation === '/contact' } />
                 </ul>
             </div>
         </div>

@@ -9,14 +9,12 @@ const Router = () => {
         <>
             <Navbar />
             <div id="page-content">
-                <div className="container-fluid">
-                    <Switch>
-                        <Route path="/" component={Home} />
-                    </Switch>
-                </div>
+                <Switch>
+                    <Route path="/" component={Home} />
+                </Switch>
             </div>
         </>
     )
 }
 
-export default Router
+export default Router;
