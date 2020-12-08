@@ -4,8 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 import ToggleLanguage from './components/toggleLanguage';
 import Navbar from './layout/navbar';
 import Home from './views/home';
+import AboutMe from './views/aboutMe';
 
-const Router = () => {
+const Routes = () => {
     return(
         <>
             <Navbar />
@@ -18,11 +19,16 @@ const Router = () => {
                     </div>
                 </div>
                 <Switch>
-                    <Route path="/" component={Home} />
+                    <Route exact path="/" >
+                        <Home />
+                    </Route>
+                    <Route exact path="/about" >
+                        <AboutMe />
+                    </Route>
                 </Switch>
             </div>
         </>
     )
 }
 
-export default Router;
+export default Routes;
