@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { useTranslation } from 'react-i18next';
 
 import './index.scss';
@@ -9,7 +9,23 @@ const AboutMe = () => {
     return(
         <div id="about-me" className="container">
             <div className="row">
-                <h1>{t('about_me')}</h1>
+                <div className="content-left col-md-8">
+                    <h1>{t('about_me')}</h1>
+                    <div className="paragraph col-12">
+                        <p>{t('para_1')}</p>
+                        <p>{t('para_2')}</p>
+                        <p>{t('para_3')}</p>
+                    </div>
+                </div>
+                <div className="content-right col-md-4">
+                    <div className="bubble">
+                        <div className="bubble-wrapper">
+                            <div className="bubble-A">
+                                <h1>A</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
