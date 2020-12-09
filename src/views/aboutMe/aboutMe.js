@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useEffect } from 'react'; 
 import { useTranslation } from 'react-i18next';
 
 import './index.scss';
@@ -6,6 +6,10 @@ import './index.scss';
 const AboutMe = () => {
     const { t } = useTranslation();
 
+    useEffect(() => {
+        document.getElementById('about-me').style.opacity = 1;
+    });
+    
     return(
         <div id="about-me" className="container">
             <div className="row">

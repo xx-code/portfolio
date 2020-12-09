@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Welcome from './components/welcome';
 import Button from '../../components/button';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +7,10 @@ import logo from '../../images/logo.png';
 
 const Home = () => {
     const { t } = useTranslation();
+
+    useEffect(() => {
+        document.getElementById('home').style.opacity = 1;
+    });
 
     return(
         <div id="home" className="container">

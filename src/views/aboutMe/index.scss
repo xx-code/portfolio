@@ -1,6 +1,8 @@
 @import '../../colors.scss';
 
 #about-me {
+    opacity: 0;
+    transition: opacity ease-in-out 100ms;
     .content-left {
         h1 {
             color: $blue;
