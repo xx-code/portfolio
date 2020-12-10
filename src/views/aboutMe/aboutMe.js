@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'; 
 import { useTranslation } from 'react-i18next';
+import TimeLine from './components/timeline';
 
 import './index.scss';
 
@@ -20,6 +21,7 @@ const AboutMe = () => {
                         <p>{t('para_2')}</p>
                         <p>{t('para_3')}</p>
                     </div>
+                    <TimeLine />
                 </div>
                 <div className="content-right col-md-4">
                     <div className="bubble">
