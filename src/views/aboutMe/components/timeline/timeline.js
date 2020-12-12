@@ -12,25 +12,57 @@ const TimeLine = () => {
             <div className="time-line-wrapper">
                 <div className="time-line-bar">
                     <Bar 
-                        color="#0C83FD"
-                        startPointInPercent={85}
-                        widthBarInPercent={15}
-                        years={2020} />
+                        info={{
+                            id: '5',
+                            title: 'Freelancer',
+                            content: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+                            color:"#0C83FD",
+                            startPointInPercent: 85,
+                            widthBarInPercent: 15,
+                            time: {
+                                startTime: 2020,
+                                endTime: t('now')
+                            },
+                        }} />
                     <Bar 
-                        color="#ED1E79"
-                        startPointInPercent={45}
-                        widthBarInPercent={18}
-                        years={2018} />
+                        info={{
+                            id: '4',
+                            title: 'Orion',
+                            content: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+                            color:"#ED1E79",
+                            startPointInPercent: 45,
+                            widthBarInPercent: 18,
+                            time: {
+                                startTime: 2018,
+                                endTime: 2018
+                            },
+                        }} />
                     <Bar 
-                        color="#47DE3A"
-                        startPointInPercent={15}
-                        widthBarInPercent={20}
-                        years={2017} />
+                        info={{
+                            id: '3',
+                            title: 'TechnoDream',
+                            content: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+                            color:"#47DE3A",
+                            startPointInPercent: 15,
+                            widthBarInPercent: 20,
+                            time: {
+                                startTime: 2017,
+                                endTime: 2017
+                            },
+                        }} />
                     <Bar 
-                        color="#FFB801"
-                        startPointInPercent={0}
-                        widthBarInPercent={80}
-                        years={2016} />
+                        info={{
+                            id: '2',
+                            title: 'Bachelor in computer application',
+                            content: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+                            color:"#FFB801",
+                            startPointInPercent: 0,
+                            widthBarInPercent: 80,
+                            time: {
+                                startTime: 2016,
+                                endTime: 2020
+                            },
+                        }} />
                 </div>
                 <div className="time-bar" />
                 <div className="label">

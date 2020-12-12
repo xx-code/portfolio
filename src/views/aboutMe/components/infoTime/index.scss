@@ -1,0 +1,35 @@
+@import '../../../../colors.scss';
+
+.info-time {
+    width: 600px;
+    @media (max-width: 630px) {
+        width: 300px;
+    }
+    .info-time-wrapper {
+        padding:  30px;
+        background-color: $white;
+        border-radius: 15px;
+        h1 {
+            font-size: 45px;
+            @media (max-width: 630px) {
+                font-size: 32px;
+            }
+        }
+        .para {
+            h3 {
+                font-size: 28px;
+                color: $blue;
+                font-weight: bold;
+                @media (max-width: 630px) {
+                    font-size: 22px;
+                }
+            }
+            p {
+                color: $high-gray;
+                @media (max-width: 630px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
