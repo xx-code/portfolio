@@ -9,7 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: top cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms;
     .back {
+        transition: opacity ease-in-out 600ms;
+        opacity: 0;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -23,7 +26,11 @@
 
 .open-popup {
     top: 0;
+    .back {
+        opacity: 1;
+    }
 }
 .close-popup {
-    top: -15000px;
+    top: -5000px;
+    opacity: 0;
 }

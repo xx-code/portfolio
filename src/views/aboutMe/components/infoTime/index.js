@@ -10,7 +10,7 @@ const InfoTime = ({ info }) => {
         <PopUpOverLay id={id} >
             <div className="info-time">
                 <div className="info-time-wrapper">
-                    <h1 style={{color}}>{`${time.startTime} - ${time.endTime}`}</h1>
+                    <h2 style={{color}}>{`${time.startTime} - ${time.endTime}`}</h2>
                     <div className="para">
                         <h3>{ title }</h3>
                         <p>{ content }</p>

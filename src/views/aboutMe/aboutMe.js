@@ -29,6 +29,9 @@ const AboutMe = () => {
                             <div className="bubble-A">
                                 <h1>A</h1>
                             </div>
+                            <div className="bubble-B"></div>
+                            <div className="bubble-C"></div>
+                            <div className="bubble-D"></div>
                         </div>
                     </div>
                 </div>

@@ -142,7 +142,7 @@
                     margin-bottom: 42px;
                     margin-top: 42px;
                     ion-icon {
-                        font-size: 50px;
+                        font-size: 32px;
                     }
                     p {
                         font-style: normal;
@@ -162,7 +162,7 @@
                 .active {
                     color: $blue !important;
                     p {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -197,7 +197,7 @@
                         display: none;
                     }
                     ion-icon {
-                        font-size: 42px;
+                        font-size: 28px;
                     }
                     &:hover {
                         color: $blue;
