@@ -1,0 +1,36 @@
+@import '../../colors.scss';
+
+.popup-overlay {
+    z-index: 8;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms;
+    .back {
+        transition: opacity ease-in-out 600ms;
+        opacity: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: .5);
+    }
+    .wrapper {
+        z-index: 12;
+        padding: 30px;
+    }
+}
+
+.open-popup {
+    top: 0;
+    .back {
+        opacity: 1;
+    }
+}
+.close-popup {
+    top: -5000px;
+    opacity: 0;
+}
