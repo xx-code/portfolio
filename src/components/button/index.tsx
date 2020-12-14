@@ -4,7 +4,14 @@ import isEmpty from '../../utils/isEmpty';
 
 import './index.scss';
 
-const Button = ({ className, href, onClick, label }) => {
+interface Props {
+    className?: string,
+    href?: string,
+    onClick?: (event: React.MouseEvent) => void,
+    label: string  
+};
+
+const Button: React.FC<Props> = ({ className, href = '', onClick, label }) => {
     return(
         <>
             { 

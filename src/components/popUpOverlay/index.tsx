@@ -2,11 +2,18 @@ import React from 'react';
 
 import './index.scss';
 
-const PopUpOverlay = ({children, id}) => {
+interface Props {
+    children: JSX.Element,
+    id: string
+};
+
+const PopUpOverlay: React.FC<Props> = ({children, id}) => {
     const closeOverlay = () => {
         const popUp = document.getElementById(`popup-${id}`); 
-        popUp.classList.remove('open-popup');
-        popUp.classList.add('close-popup');       
+        if (popUp) {
+            popUp.classList.remove('open-popup');
+            popUp.classList.add('close-popup');   
+        }    
     };
 
     return(
@@ -19,4 +26,4 @@ const PopUpOverlay = ({children, id}) => {
     );
 };
 
-export default PopUpOverlay
+export default PopUpOverlay;

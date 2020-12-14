@@ -12,13 +12,15 @@ const Navbar = () => {
     const currentLocation = useLocation().pathname;
     const { t } = useTranslation();
 
-    const displayNavItems = (canDisplay) => {
+    const displayNavItems = (canDisplay: boolean) => {
         const navbarItemsResponsive = document.getElementById('navbar-items-behavior');
         const hambugerElement = document.getElementById('hamburger-element');
-        navbarItemsResponsive.style.left = canDisplay ? '0' : '-15000px';
-        hambugerElement.classList.remove(canDisplay ? 'bar' : 'close');
-        hambugerElement.classList.add(canDisplay ? 'close' : 'bar');
-        setCanDisplayNavItems(!canDisplay);
+        if (navbarItemsResponsive && hambugerElement) {
+           navbarItemsResponsive.style.left = canDisplay ? '0' : '-15000px';
+            hambugerElement.classList.remove(canDisplay ? 'bar' : 'close');
+            hambugerElement.classList.add(canDisplay ? 'close' : 'bar');
+            setCanDisplayNavItems(!canDisplay); 
+        }
     };
 
     const handleHambugerElement = () => {

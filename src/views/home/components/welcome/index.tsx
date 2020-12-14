@@ -2,7 +2,17 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-const switchColor = (letter, targetLetters) => {
+interface TargetLetter {
+    letter: string,
+    style: string
+};
+
+interface LettersDisplayingProps {
+    letters: [string],
+    highLetters: Array<TargetLetter>
+};
+
+const switchColor = (letter: string, targetLetters: Array<TargetLetter>) => {
     for(let i = 0; i < targetLetters.length; i++){
         if (letter === targetLetters[i].letter) {
             return targetLetters[i].style
@@ -11,8 +21,7 @@ const switchColor = (letter, targetLetters) => {
     return ''
 };
 
-const LettersDisplaying = ({letters, highLetters = []}) => {
-
+const LettersDisplaying: React.FC<LettersDisplayingProps> = ({letters, highLetters}) => {
     return(
         <>
             {
@@ -39,7 +48,9 @@ const Welcome = () => {
             <div className="welcome-wrapper">
                 <div className="para">
                    {
-                       <LettersDisplaying letters={paragraph1} />
+                       <LettersDisplaying 
+                            letters={paragraph1} 
+                            highLetters={[]} />
                    }
                    <span className="letter">,</span>
                 </div>
@@ -62,7 +73,8 @@ const Welcome = () => {
                         <LettersDisplaying 
                             letters={paragraph4}
                             highLetters={[{letter: 'D', style: 'pink-letter'}]} />
-                    }<span className="letter">.</span>
+                    }
+                    <span className="letter">.</span>
                 </div>
             </div>
             <p className="job-info">
