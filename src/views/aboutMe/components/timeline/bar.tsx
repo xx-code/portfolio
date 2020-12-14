@@ -1,15 +1,22 @@
 import React from 'react';
 import InfoTime from '../infoTime';
+import BarType from './barType';
 
 import './index.scss';
 
-const Bar = ({ info }) => {
+interface Props {
+    info: BarType
+};
+
+const Bar: React.FC<Props> = ({ info }) => {
     const {id, time, title, content, color, widthBarInPercent, startPointInPercent } = info;
 
     const displayPopUpInfo = () => {
         const currentPopup = document.getElementById(`popup-${id}`);
-        currentPopup.classList.remove('close-popup');
-        currentPopup.classList.add('open-popup');
+        if (currentPopup) {
+            currentPopup.classList.remove('close-popup');
+            currentPopup.classList.add('open-popup');
+        }
     };
 
     return(

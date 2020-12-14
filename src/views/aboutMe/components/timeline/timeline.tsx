@@ -20,7 +20,7 @@ const TimeLine = () => {
                             startPointInPercent: 85,
                             widthBarInPercent: 15,
                             time: {
-                                startTime: 2020,
+                                startTime: '2020',
                                 endTime: t('now')
                             },
                         }} />
@@ -33,8 +33,8 @@ const TimeLine = () => {
                             startPointInPercent: 45,
                             widthBarInPercent: 18,
                             time: {
-                                startTime: 2018,
-                                endTime: 2018
+                                startTime: '2018',
+                                endTime: '2018'
                             },
                         }} />
                     <Bar 
@@ -46,8 +46,8 @@ const TimeLine = () => {
                             startPointInPercent: 15,
                             widthBarInPercent: 20,
                             time: {
-                                startTime: 2017,
-                                endTime: 2017
+                                startTime: '2017',
+                                endTime: '2017'
                             },
                         }} />
                     <Bar 
@@ -59,8 +59,8 @@ const TimeLine = () => {
                             startPointInPercent: 0,
                             widthBarInPercent: 80,
                             time: {
-                                startTime: 2016,
-                                endTime: 2020
+                                startTime: '2016',
+                                endTime: '2020'
                             },
                         }} />
                 </div>

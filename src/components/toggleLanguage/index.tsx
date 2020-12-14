@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 import './index.scss';
 
-const ToggleLanguage = () => {
+const ToggleLanguage: React.FC = () => {
     const { i18n } = useTranslation();
 
-    const onChangeLanguage = (value) => {
+    const onChangeLanguage = (value: string) => {
         i18n.changeLanguage(value);
     };
 

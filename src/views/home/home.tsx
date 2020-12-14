@@ -5,11 +5,14 @@ import { useTranslation } from 'react-i18next';
 
 import logo from '../../images/logo.png';
 
-const Home = () => {
+const Home: React.FC = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.getElementById('home').style.opacity = 1;
+        const homeComponent = document.getElementById('home');
+        if (homeComponent) {
+            homeComponent.style.opacity = '1';
+        }
     });
 
     return(

@@ -4,11 +4,14 @@ import TimeLine from './components/timeline';
 
 import './index.scss';
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.getElementById('about-me').style.opacity = 1;
+        const aboutMeComponent = document.getElementById('about-me');
+        if (aboutMeComponent) {
+           aboutMeComponent.style.opacity = '1'; 
+        }
     });
     
     return(
