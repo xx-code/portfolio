@@ -11,7 +11,7 @@ interface Props {
     label: string  
 };
 
-const Button: React.FC<Props> = ({ className, href = '', onClick, label }) => {
+const Button: React.FC<Props> = ({ className, onClick, label, href = ''}) => {
     return(
         <>
             { 
