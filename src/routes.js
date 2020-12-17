@@ -5,6 +5,7 @@ import ToggleLanguage from './components/toggleLanguage';
 import Navbar from './layout/navbar';
 import Home from './views/home';
 import AboutMe from './views/aboutMe';
+import Skills from './views/skills';
 
 const Routes = () => {
     return(
@@ -24,6 +25,9 @@ const Routes = () => {
                     </Route>
                     <Route exact path="/about" >
                         <AboutMe />
+                    </Route>
+                    <Route exact path="/skills">
+                        <Skills />
                     </Route>
                 </Switch>
             </div>
