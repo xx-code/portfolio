@@ -6,6 +6,7 @@ import Navbar from './layout/navbar';
 import Home from './views/home';
 import AboutMe from './views/aboutMe';
 import Skills from './views/skills';
+import Contact from './views/contact';
 
 const Routes = () => {
     return(
@@ -28,6 +29,9 @@ const Routes = () => {
                     </Route>
                     <Route exact path="/skills">
                         <Skills />
+                    </Route>
+                    <Route exact path="/contact">
+                        <Contact />
                     </Route>
                 </Switch>
             </div>
