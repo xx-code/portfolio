@@ -1,1 +1,30 @@
 @import '../../colors.scss';
+
+#contact {
+    opacity: 0;
+    transition: opacity ease-in-out 100ms;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    .content-left {
+        h1 {
+            color: $blue;
+            font-weight: bold;
+            margin-bottom: 58px;
+            text-transform: capitalize;
+        }
+        .contact-form {
+            .contact-form-wrapper {
+                .contact-button {
+                    border: 1px solid $blue;
+                    &:hover {
+                        border-color: $high-gray;
+                        color: $high-gray;
+                    }
+                }
+            }
+        }
+    }
+}

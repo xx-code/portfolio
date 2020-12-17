@@ -18,5 +18,14 @@
     "now": "Now",
     "skills_title": "My Skills",
     "tools_use": "Current Tools Use",
-    "tools": "Tools Known"
+    "tools": "Tools Known",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "email": "Email",
+    "describe_contact": "Describe why do you contact me",
+    "email_error": "Email field empty",
+    "email_no_valid": "Email is no valid",
+    "firstname_error": "Firstname field empty",
+    "lastname_error": "Lastname field empty",
+    "describe_error": "Describe field empty"
 }

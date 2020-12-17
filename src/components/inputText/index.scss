@@ -1,0 +1,45 @@
+@import '../../colors.scss';
+
+.input-text-wrapper {
+    width: 100%;
+    margin-bottom: 39px;
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: $white;
+    -webkit-box-shadow: 0 0 0px 1000px $high-dark inset;
+    transition: background-color 5000s ease-in-out 0s;
+    }
+    .input {
+        position: relative;
+        width: 100%;
+        padding: 19px 1px 19px 22px;
+        background-color: $high-dark;
+        border: none;
+        color: white;
+        &:focus {
+            outline: solid $blue 1px;
+            background-color: $high-dark; 
+        }
+    }
+    .input-indicator {
+        height: 2px;
+        width: 100%;
+        transition: background-color ease-out 350ms;
+    }
+    .input-textarea {
+        border: 2px solid $blue;
+    }
+    
+    .error {
+        font-size: 12px;
+        color: $error-color;
+    }
+}
