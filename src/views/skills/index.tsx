@@ -8,62 +8,63 @@ import './index.scss';
 const actuSkill: Array<IconItem> = [
     {
         id: 'node_js',
-        icon: 'node-js',
-        selected: true
+        icon: 'nodejs-plain',
     },
     {
         id: 'react',
-        icon: 'react',
-        selected: false
+        icon: 'react-original',
     },
     {
         id: 'sass',
-        icon: 'sass',
-        selected: false
+        icon: 'sass-original',
     },
     {
         id: 'html5',
-        icon: 'html5',
-        selected: false
+        icon: 'html5-plain',
     },
 ]
 
 const mySkill: Array<IconItem> = [
     {
         id: 'trello',
-        icon: 'trello',
-        selected: false
+        icon: 'trello-plain',
     },
     {
         id: 'javascript',
-        icon: 'js-square',
-        selected: false
+        icon: 'javascript-plain',
     },
     {
         id: 'python',
-        icon: 'python',
-        selected: false
+        icon: 'python-plain',
     },
     {
         id: 'java',
-        icon: 'java',
-        selected: false
+        icon: 'java-plain',
     },
     {
         id: 'css3',
-        icon: 'css3-alt',
-        selected: false
+        icon: 'css3-plain',
     },
     {
         id: 'express',
-        icon: 'html5',
-        selected: false
+        icon: 'express-original',
     },
     {
         id: 'android',
-        icon: 'android',
-        selected: false
+        icon: 'android-plain',
     },
+    {
+        id: 'redux',
+        icon: 'redux-original',
+    },
+    {
+        id: 'photoshop',
+        icon: 'photoshop-plain',
+    },
+    {
+        id: 'mysql',
+        icon: 'mysql-plain',
+    }
 ]
 
 const Skills: React.FC = () => {
@@ -102,7 +103,8 @@ const Skills: React.FC = () => {
                             <div className="skills-wrapper">
                                 <IconContent 
                                     icons={actuSkill} 
-                                    onChangeIconSelected={(id: string) => handleClickIconActu(id)} />
+                                    onChangeIconSelected={(id: string) => handleClickIconActu(id)}
+                                    idIconSelected={skill.id} />
                             </div>
                         </div>
                         <h3><i className="fas fa-code-branch" /> { t('tools') }</h3>
@@ -110,7 +112,8 @@ const Skills: React.FC = () => {
                             <div className="skills-wrapper">
                                 <IconContent 
                                     icons={mySkill} 
-                                    onChangeIconSelected={(id: string) => handleClickIconKnow(id)} />
+                                    onChangeIconSelected={(id: string) => handleClickIconKnow(id)}
+                                    idIconSelected={skill.id} />
                             </div>
                         </div>
                     </div>
@@ -119,7 +122,7 @@ const Skills: React.FC = () => {
                     <div className="skill-info">
                         <div className="skill-info-wrapper">
                             <div className="icon-wrapper">
-                                <i className={`fab fa-${skill.icon}`} />
+                                <i className={`fab devicon-${skill.icon} colored`} />
                             </div>
                             <div className="paragraph">
                                 <p>Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis .</p>

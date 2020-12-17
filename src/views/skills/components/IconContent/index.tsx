@@ -5,10 +5,11 @@ import './index.scss';
 
 interface Props {
     icons: Array<IconItem>,
-    onChangeIconSelected: (id: string) => void
+    onChangeIconSelected: (id: string) => void,
+    idIconSelected: string
 }
 
-const IconContent: React.FC<Props> = ({icons, onChangeIconSelected}) => {
+const IconContent: React.FC<Props> = ({icons, onChangeIconSelected, idIconSelected}) => {
     return(
         <div className="icon-content">
             <div className="icon-content-wrapper">
@@ -17,6 +18,7 @@ const IconContent: React.FC<Props> = ({icons, onChangeIconSelected}) => {
                         return <IconTouch 
                                     key={item.id} 
                                     iconItem={item} 
+                                    selected={idIconSelected === item.id}
                                     onClick={onChangeIconSelected} />
                     })
                 }
