@@ -2,8 +2,10 @@ import React, { useEffect, useReducer, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../../components/button';
 import InputText from '../../components/inputText';
+import Logo from '../../images/logo.png';
 
 import './index.scss';
+import { IconsLink } from './data.json';
 import validInput from './utils/validInput';
 
 const Contact: React.FC = () => {
@@ -16,6 +18,7 @@ const Contact: React.FC = () => {
     }
     const [errors, setErrors] = useState(initInput);
     const [input, setInput] = useReducer((state: any, newState: any) => ({...state, ...newState}), initInput); 
+    const [selectedLink, setSelectedLink] = useState(IconsLink[0].id);
 
     useEffect(() => {
         const contactComponent = document.getElementById('contact');
@@ -27,6 +30,10 @@ const Contact: React.FC = () => {
     const handleInputFiels = (event: any) => {
         const { name, value } = event.target;
         setInput({[name]: value});
+    };
+
+    const onChangeIcon = (valIcon: string) => {
+        setSelectedLink(valIcon);
     };
 
     const onSubmit = () => {
@@ -94,7 +101,35 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
                 <div className="content-right col-md-6">
-
+                    <div className="content-wrapper">
+                        <img src={Logo} alt="logo" />
+                        <div className="link">
+                            <div className="link-wrapper">
+                                <p>Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro.</p>
+                                <div className="link-icon">
+                                    {
+                                        IconsLink.map((iconLink, index) => {
+                                            return <i 
+                                                        className={`${iconLink.icon} ${selectedLink === iconLink.id ? 'active' : ''}`} 
+                                                        onClick={() => onChangeIcon(iconLink.id)} />
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div className="content-button">
+                            <div className="content-button-wrapper">
+                                <p>Superatis Tauri montis verticibus qui ad solis.</p>
+                                <Button 
+                                    className="visit-button"
+                                    label={t('visit')} />
+                            </div>
+                        </div>
+                        <div className="band">
+                            <div className="band-1" />
+                            <div className="band-2" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

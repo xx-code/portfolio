@@ -27,5 +27,10 @@
     "email_no_valid": "Votre email est invalide",
     "firstname_error": "Veuillez inserer votre prenom",
     "lastname_error": "Veuillez inserer votre nom",
-    "describe_error": "Veuillez decrire votre problem"
+    "describe_error": "Veuillez decrire votre problem",
+    "visit": "Visité",
+    "linkedin": "",
+    "github": "",
+    "instagram": "",
+    "whatsapp": ""
 }

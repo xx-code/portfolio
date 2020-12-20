@@ -27,5 +27,10 @@
     "email_no_valid": "Email is no valid",
     "firstname_error": "Firstname field empty",
     "lastname_error": "Lastname field empty",
-    "describe_error": "Describe field empty"
+    "describe_error": "Describe field empty",
+    "visit": "Visit",
+    "linkedin": "",
+    "github": "",
+    "instagram": "",
+    "whatsapp": ""
 }
