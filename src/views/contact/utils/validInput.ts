@@ -9,7 +9,7 @@ const ValidInput = (data: any) => {
         describe: ''
     };
 
-    const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    const regexEmail = /^[\w-]+@([\w-]+)+[\w-]{2,4}$/g;
     if (isEmpty(data.email)) {
         errors.email = i18next.t('email_error');
     } else if (!regexEmail.test(data.email)) {
