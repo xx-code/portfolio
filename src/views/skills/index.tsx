@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import IconContent from './components/IconContent';
 import { useTranslation } from 'react-i18next';
-import { IconItem } from './components/IconContent/iconTouch';
+import { iconItem } from './components/types'
 
 import './index.scss';
 
-const actuSkill: Array<IconItem> = [
+const actuSkill: Array<iconItem> = [
     {
         id: 'node_js',
         icon: 'nodejs-plain',
@@ -24,7 +24,7 @@ const actuSkill: Array<IconItem> = [
     },
 ]
 
-const mySkill: Array<IconItem> = [
+const mySkill: Array<iconItem> = [
     {
         id: 'trello',
         icon: 'trello-plain',

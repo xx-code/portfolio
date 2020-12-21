@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PopUpOverlay from '../../../../components/popUpOverlay';
-import { project } from './projectList';
 import Button from '../../../../components/button';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { project } from './types';
 
 import './index.scss';
 

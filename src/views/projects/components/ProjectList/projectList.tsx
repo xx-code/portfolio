@@ -1,17 +1,7 @@
 import React from 'react';
 import ProjectDetails from './projectDetail';
+import { project } from './types';
 import './index.scss';
-
-
-export interface project {
-    id: string,
-    title: string,
-    description: string,
-    preview: any,
-    images: Array<any>,
-    icon: any,
-    createdBy: string
-}
 
 interface propsProjct {
     project: project

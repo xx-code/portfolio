@@ -1,11 +1,30 @@
 import React from 'react';
-import InfoTime from '../infoTime';
-import BarType from './barType';
-
+import PopUpOverLay from '../../../../components/popUpOverlay';
+import { bar } from '../types';
+ 
 import './index.scss';
 
 interface Props {
-    info: BarType
+    info: bar
+};
+
+
+const InfoTime: React.FC<Props> = ({ info }) => {
+    const {id, time, title, content, color } = info;
+
+    return(
+        <PopUpOverLay id={id}  >
+            <div className="info-time">
+                <div className="info-time-wrapper">
+                    <h2 style={{color}}>{`${time.startTime} - ${time.endTime}`}</h2>
+                    <div className="para">
+                        <h3>{ title }</h3>
+                        <p>{ content }</p>
+                    </div>
+                </div>
+            </div>
+        </PopUpOverLay>
+    );
 };
 
 const Bar: React.FC<Props> = ({ info }) => {

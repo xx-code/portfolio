@@ -1,14 +1,15 @@
-interface BarTime {
+interface time{
     startTime: string,
     endTime: string
 };
 
-export default interface BarContent {
+export interface bar {
     id: string, 
-    time: BarTime, 
+    time: time, 
     title: string, 
     content: string, 
     color: string, 
     widthBarInPercent?: number, 
     startPointInPercent?: number
 };
+

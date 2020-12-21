@@ -63,3 +63,51 @@
         }
     }
 }
+
+.info-time {
+    width: 600px;
+    @media (max-width: 630px) {
+        width: 300px;
+    }
+    @media (max-width: 340px) {
+        width: 220px;
+    }
+    .info-time-wrapper {
+        padding:  30px;
+        background-color: $white;
+        border-radius: 15px;
+        h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            @media (max-width: 630px) {
+                font-size: 32px;
+            }
+            @media (max-width: 340px) {
+                font-size: 24px;
+            }
+        }
+        .para {
+            h3 {
+                font-size: 28px;
+                color: $blue;
+                font-weight: bold;
+                @media (max-width: 630px) {
+                    font-size: 22px;
+                }
+                @media (max-width: 340px) {
+                    font-size: 18px;
+                }
+            }
+            p {
+                color: $high-gray;
+                @media (max-width: 630px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 340px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
