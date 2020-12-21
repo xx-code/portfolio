@@ -10,16 +10,26 @@ import './index.scss';
 
 
 interface props {
-    project: project
+    project: project,
+    isDisplay: boolean,
+    onClose: () => void
 }
 
-const ProjectDetails: React.FC<props> = ({ project }) => {
+const ProjectDetails: React.FC<props> = ({ project, isDisplay, onClose }) => {
     const { t } = useTranslation();
 
     return(
-        <PopUpOverlay id={`project-${ project.id }`} >
+        <PopUpOverlay 
+            id={`project-${ project.id }`}
+            isDisplay={isDisplay}
+            onClose={onClose} >
             <div className="project-detail">
                 <div className="project-detail-wrapper">
+                    <div className="close-btn">
+                        <div className="close-btn-wrapper" onClick={onClose}>
+                           <i className="far fa-times-circle"></i> 
+                        </div>
+                    </div>
                     <div className="title-info">
                         <div className="title-info-wrapper">
                             <img src={ project.icon } alt={ project.id } />

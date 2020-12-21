@@ -4,21 +4,15 @@ import './index.scss';
 
 interface Props {
     children: JSX.Element,
-    id: string
+    id: string,
+    isDisplay: boolean,
+    onClose?: () => void
 };
 
-const PopUpOverlay: React.FC<Props> = ({children, id}) => {
-    const closeOverlay = () => {
-        const popUp = document.getElementById(`popup-${id}`); 
-        if (popUp) {
-            popUp.classList.remove('open-popup');
-            popUp.classList.add('close-popup');   
-        }    
-    };
-
+const PopUpOverlay: React.FC<Props> = ({children, id, isDisplay, onClose}) => {
     return(
-        <div id={`popup-${id}`} className="popup-overlay close-popup" >
-            <div className="back" onClick={() => closeOverlay()} />
+        <div id={`popup-${id}`} className={`popup-overlay ${isDisplay ? 'open-popup' : 'close-popup'}`} >
+            <div className="back" onClick={onClose} />
             <div className="wrapper">
                 { children }
             </div>

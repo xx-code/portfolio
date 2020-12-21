@@ -1,10 +1,26 @@
 @import '../../../../colors.scss';
 
 .project-detail {
-    background-color: $white;
-    border-radius: 5px;
+    
     .project-detail-wrapper {
+        background-color: $white;
+        border-radius: 5px;
         padding: 25px;
+        .close-btn {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            .close-btn-wrapper {
+                padding: 8px;
+                margin-bottom: 15px;
+                i {
+                    color: $high-gray;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
         .title-info {
             display: flex;
             justify-content: space-between;

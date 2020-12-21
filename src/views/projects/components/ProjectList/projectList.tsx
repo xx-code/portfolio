@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectDetails from './projectDetail';
 import { project } from './types';
 import './index.scss';
@@ -12,16 +12,13 @@ interface props {
 }
 
 const Project: React.FC<propsProjct> = ({ project }) => {
-    const displayPopUpDetail = () => {
-        const popUpDetail = document.getElementById(`popup-project-${project.id}`);
-        if (popUpDetail) {
-            popUpDetail.classList.remove('close-popup');
-            popUpDetail.classList.add('open-popup');
-        }
+    const [isDisplay, setIsDisplay] = useState(false);
+    const displayPopUpDetail = (isDisplay: boolean) => {
+        setIsDisplay(isDisplay);
     };
 
     return(
-        <div className="col-md-4 project-col" onClick={() => displayPopUpDetail()}>
+        <div className="col-md-4 project-col" onClick={() => displayPopUpDetail(true)}>
             <div className="project">
                 <div className="project-wrapper">
                     <img src={project.preview} alt={`project-${project.id}`} />
@@ -30,7 +27,10 @@ const Project: React.FC<propsProjct> = ({ project }) => {
             <div className="overlay-info-display">
                 <i className="far fa-eye"></i>
             </div>
-            <ProjectDetails project={project} />
+            <ProjectDetails 
+                project={project}
+                isDisplay={isDisplay}
+                onClose={() => displayPopUpDetail(false)} />
         </div>
     );
 };

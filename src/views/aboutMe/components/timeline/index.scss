@@ -53,6 +53,8 @@
                 .bar-content{
                     position: absolute;
                     height: 5px;
+                    width: 0;
+                    transition: width ease-in 350ms;
                     span {
                         top: -18px;
                         position: absolute;
