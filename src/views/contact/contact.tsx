@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Button from '../../components/button';
 import InputText from '../../components/inputText';
 import Logo from '../../images/logo.png';
-
+import sendMessage from './services/sendMessage';
 import './index.scss';
 import { IconsLink } from './data.json';
 import validInput from './utils/validInput';
@@ -38,11 +38,9 @@ const Contact: React.FC = () => {
 
     const onSubmit = () => {
         const { isValid, errors } = validInput(input);
-        console.log(input)
-        console.log(errors)
         if (isValid) {
             setErrors(initInput);
-            console.log(input);
+            sendMessage(input);
         } else {
             setErrors(errors);
         }

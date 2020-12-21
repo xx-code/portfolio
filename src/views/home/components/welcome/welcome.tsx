@@ -1,27 +1,15 @@
 import React from 'react';
-
 import { useTranslation } from 'react-i18next';
+import { targetLetter } from '../types';
+import switchColor from '../utils/switchColor';
 
-interface TargetLetter {
-    letter: string,
-    style: string
-};
-
-interface LettersDisplayingProps {
+interface Props {
     letters: [string],
-    highLetters: Array<TargetLetter>
+    highLetters: Array<targetLetter>
 };
 
-const switchColor = (letter: string, targetLetters: Array<TargetLetter>) => {
-    for(let i = 0; i < targetLetters.length; i++){
-        if (letter === targetLetters[i].letter) {
-            return targetLetters[i].style
-        }
-    };
-    return ''
-};
 
-const LettersDisplaying: React.FC<LettersDisplayingProps> = ({letters, highLetters}) => {
+const LettersDisplaying: React.FC<Props> = ({letters, highLetters}) => {
     return(
         <>
             {

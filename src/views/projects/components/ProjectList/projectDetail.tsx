@@ -1,25 +1,35 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PopUpOverlay from '../../../../components/popUpOverlay';
-import { project } from './projectList';
 import Button from '../../../../components/button';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { project } from './types';
 
 import './index.scss';
 
 
 interface props {
-    project: project
+    project: project,
+    isDisplay: boolean,
+    onClose: () => void
 }
 
-const ProjectDetails: React.FC<props> = ({ project }) => {
+const ProjectDetails: React.FC<props> = ({ project, isDisplay, onClose }) => {
     const { t } = useTranslation();
 
     return(
-        <PopUpOverlay id={`project-${ project.id }`} >
+        <PopUpOverlay 
+            id={`project-${ project.id }`}
+            isDisplay={isDisplay}
+            onClose={onClose} >
             <div className="project-detail">
                 <div className="project-detail-wrapper">
+                    <div className="close-btn">
+                        <div className="close-btn-wrapper" onClick={onClose}>
+                           <i className="far fa-times-circle"></i> 
+                        </div>
+                    </div>
                     <div className="title-info">
                         <div className="title-info-wrapper">
                             <img src={ project.icon } alt={ project.id } />

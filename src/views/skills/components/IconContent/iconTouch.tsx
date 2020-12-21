@@ -1,14 +1,10 @@
 import React from 'react';
+import { iconItem } from '../types';
 
 import './index.scss';
 
-export interface IconItem {
-    id: string,
-    icon: string,
-};
-
 interface Props {
-    iconItem: IconItem,
+    iconItem: iconItem,
     onClick: (id: string) => void,
     selected: boolean
 }
