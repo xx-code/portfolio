@@ -1,0 +1,28 @@
+{
+    "IconsLink":[
+        {
+            "id": "1",
+            "icon": "fab fa-linkedin-in",
+            "detail": "linkedin",
+            "link": ""
+        },
+        {
+            "id": "2",
+            "icon": "fab fa-github",
+            "detail": "github",
+            "link": ""
+        },
+        {
+            "id": "3",
+            "icon": "fab fa-instagram",
+            "detail": "instagram",
+            "link": ""
+        },
+        {
+            "id": "4",
+            "icon": "fab fa-whatsapp",
+            "detail": "whatsapp",
+            "link": ""
+        }
+    ] 
+}

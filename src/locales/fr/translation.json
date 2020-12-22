@@ -18,5 +18,21 @@
     "now": "Maintenant",
     "skills_title": "Mes Compétences",
     "tools_use": "Outils Utilisé Actuellement",
-    "tools": "Outils Maitrisé"
+    "tools": "Outils Maitrisé",
+    "firstname": "Prenom",
+    "lastname": "Nom",
+    "email": "Email",
+    "describe_contact": "Decrivez pourquoi vous me contactez",
+    "email_error": "Veuillez inserer votre email",
+    "email_no_valid": "Votre email est invalide",
+    "firstname_error": "Veuillez inserer votre prenom",
+    "lastname_error": "Veuillez inserer votre nom",
+    "describe_error": "Veuillez decrire votre problem",
+    "visit": "Visité",
+    "linkedin": "",
+    "github": "",
+    "instagram": "",
+    "whatsapp": "",
+    "descritpion": "description",
+    "loading": "Chargement"
 }
