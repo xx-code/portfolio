@@ -11,18 +11,19 @@ const Home: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const homeComponent = document.getElementById('home');
-        if (homeComponent) {
-            homeComponent.style.opacity = '1';
-        }
-    });
+        setTimeout(() => {
+            setIsLoading(false);
+            const homeComponent = document.getElementById('home');
+            if (homeComponent) {
+                homeComponent.style.opacity = '1';
+            }
+        }, 3500);
+    }, [isLoading]);
 
     return(
         isLoading ?
-                    <Loading className="" />
-
+                    <Loading />
                   :
-
                     <div id="home" className="container">
                         <div className="row">
                             <div className="content-left">

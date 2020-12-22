@@ -5,7 +5,7 @@ import logo from '../../images/logo.png';
 import './index.scss';
 
 interface Props {
-    className: string
+    className?: string
 }
 
 const Loading: React.FC<Props> = ({ className }) => {

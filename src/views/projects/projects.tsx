@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Loading from '../../components/loading';
 import ProjectList from './components/ProjectList';
 import imag from '../../images/project.jpg';
 
@@ -62,18 +63,26 @@ const fakeData = [
 ]
 
 const Projects: React.FC = () => {
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const projectsComponent = document.getElementById('projects');
-        if (projectsComponent) {
-            projectsComponent.style.opacity = '1'; 
-        }
-    });
+        setTimeout(() => {
+            setIsLoading(false);
+            const projectsComponent = document.getElementById('projects');
+            if (projectsComponent) {
+                projectsComponent.style.opacity = '1'; 
+            }
+        }, 3500);
+    }, [isLoading]);
 
     return(
-        <div id="projects" className="container-fluid">
-            <ProjectList list={fakeData} />
-        </div>
+        isLoading ? 
+                    <Loading />
+                  :
+
+                    <div id="projects" className="container-fluid">
+                        <ProjectList list={fakeData} />
+                    </div>
     );
 };
 
