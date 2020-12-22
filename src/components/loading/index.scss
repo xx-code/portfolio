@@ -1,0 +1,108 @@
+@import '../../colors.scss';
+
+@mixin animation($duration, $delay) {
+    $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-delay: $delay;
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+}
+
+
+#loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: $high-dark;
+    .loading-wrapper {
+        height: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo {
+            .logo-wrapper {
+                height: 80px;
+                img {
+                    height: 100%;
+                    @include animation(1.8s, 0) {
+                        from { transform: rotate(0deg); }
+                        to {transform: rotate(360deg);}
+                    }
+                }
+            }
+        }
+        .loading-info {
+            p {
+                padding: 0;
+                margin: 0;
+                color: $white;
+                .dot-1 {
+                    margin-left: 2px;
+                    font-size: 18px;
+                    margin-right: 2px;
+                    @include animation(1s, 0) {
+                        from { 
+                            opacity:0; 
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .dot-2 {
+                    margin-right: 2px;
+                    @include animation(1s, 300ms) {
+                        from { 
+                            opacity:0; 
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .dot-3 {
+                    margin-right: 2px;
+                    @include animation(1s, 6500ms) {
+                        from { 
+                            opacity:0; 
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .load-bar {
+            .load-bar-wrapper {
+                margin-top: 18px;
+                width: 350px;
+                border: 1px solid $gray;
+                .bar {
+                    background-color: $gray;
+                    margin: 5px;
+                    width: 0%;
+                    height: 8px;
+                    @include animation(3.5s, 0) {
+                        from { 
+                            width:0; 
+                            background-color: $gray;
+                        }
+                        to {
+                            width: 96.9%;
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
