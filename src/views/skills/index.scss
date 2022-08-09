@@ -38,11 +38,16 @@
 
     .content-right {
         .skill-info {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
             .skill-info-wrapper {
                 .icon-wrapper {
                     display: flex;
                     justify-content: center;
-                    padding-bottom: 38px;
+                    padding-bottom: 20px;
                     i {
                         font-size: 200px;
                         align-items: center; 
@@ -50,11 +55,11 @@
                 }
                 
                 .paragraph {
-                    p {
-                        font-size: 18px;
+                    h3 {
                         margin-bottom: 14px;
                         text-align: center;
                         color: $white;
+                        font-weight: bold;
                     }
                 }
             }

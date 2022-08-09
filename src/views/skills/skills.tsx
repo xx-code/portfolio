@@ -133,8 +133,7 @@ const Skills: React.FC = () => {
                                             <i className={`fab devicon-${skill.icon} colored`} />
                                         </div>
                                         <div className="paragraph">
-                                            <p>Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis .</p>
-                                            <p>dives bonis omnibus terra, eiusque lateri dextro. Late distentis dives bonis omnibus terra, eiusque lateri dextro. Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. Late</p>
+                                            <h3>{skill.id}</h3>
                                         </div>
                                     </div>
                                 </div>
