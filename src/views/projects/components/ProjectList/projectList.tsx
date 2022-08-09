@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ProjectDetails from './projectDetail';
 import { project } from './types';
 import './index.scss';
 
@@ -27,10 +26,6 @@ const Project: React.FC<propsProjct> = ({ project }) => {
             <div className="overlay-info-display">
                 <i className="far fa-eye"></i>
             </div>
-            <ProjectDetails 
-                project={project}
-                isDisplay={isDisplay}
-                onClose={() => displayPopUpDetail(false)} />
         </div>
     );
 };

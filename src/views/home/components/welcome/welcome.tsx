@@ -4,7 +4,7 @@ import { targetLetter } from '../types';
 import switchColor from '../utils/switchColor';
 
 interface Props {
-    letters: [string],
+    letters: Array<string>,
     highLetters: Array<targetLetter>
 };
 
