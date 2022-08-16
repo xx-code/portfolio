@@ -2,21 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Loading from '../../components/loading';
 import TimeLine from './components/timeline';
+import { fetchAllMyResume, resumeType } from '../../services/aboutMe';
 
 import './index.scss';
 
 const AboutMe: React.FC = () => {
+    const defaultResumes: Array<resumeType> = [];
     const { t } = useTranslation();
     const [isLoading, setIsLoading] = useState(true);
+    const [resumes, setResumes] = useState(defaultResumes);
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
+        const fetchData = async () => {
+            const data = await fetchAllMyResume();
+            
+            setResumes(data);
             const aboutMeComponent = document.getElementById('about-me');
             if (aboutMeComponent) {
-            aboutMeComponent.style.opacity = '1'; 
+                aboutMeComponent.style.opacity = '1'; 
             }
-        }, 3500);
+            setIsLoading(false);
+        }
+        fetchData();
     }, [isLoading]);
     
     return(
@@ -32,7 +39,7 @@ const AboutMe: React.FC = () => {
                                     <p>{t('para_2')}</p>
                                     <p>{t('para_3')}</p>
                                 </div>
-                                <TimeLine />
+                                <TimeLine data={resumes} />
                             </div>
                             <div className="content-right col-md-4">
                                 <div className="bubble">

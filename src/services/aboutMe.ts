@@ -1,5 +1,22 @@
 // mock 
-const result = [
+export interface resumeType {
+    title: string,
+    detail: string,
+    startDate: Date,
+    endDate?: Date,
+    isCurrent: boolean,
+    type: string
+}
+
+const result: Array<resumeType> = [
+    {
+        title: 'Orion',
+        startDate: new Date(2018, 6),
+        endDate: new Date(2018, 9),
+        isCurrent: false,
+        type: 'Work',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+    },
     {
         title: 'Bachelor in computer application',
         startDate: new Date(2016, 9),
@@ -7,6 +24,14 @@ const result = [
         isCurrent: false,
         type: 'Education',
         detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+    },
+    {
+        title: 'Freelancer',
+        startDate: new Date(2020, 9),
+        endDate: undefined,
+        isCurrent: true,
+        type: 'Work',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur'
     },
     {
         title: 'TechnoDream',
@@ -17,20 +42,12 @@ const result = [
         detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
     },
     {
-        title: 'Orion',
-        startDate: new Date(2018, 6),
-        endDate: new Date(2018, 9),
+        title: 'TechnoDream',
+        startDate: new Date(2022, 1),
+        endDate: new Date(2022, 2),
         isCurrent: false,
         type: 'Work',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
-    },
-    {
-        title: 'Freelancer',
-        startDate: new Date(),
-        endDate: null,
-        isCurrent: true,
-        type: 'Work',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur'
+        detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
     }
 ];
 
@@ -69,5 +86,5 @@ const fetchResume = async (id: number) => {
 export {
     fetchAllMyResume,
     fetchResume,
-    fetchMyProfile
+    fetchMyProfile,
 }
