@@ -1,93 +1,117 @@
-const result = [
+import { useDebugValue } from "react";
+
+export interface skillType {
+    id: string,
+    title: string,
+    description: string,
+    icon: string,
+    level: number,
+    isCurrentlyUseful: boolean
+}
+
+const result: Array<skillType> = [
     {
+        id: '0',
         title: 'Nodejs',
         description: '',
         icon: 'nodejs-plain',
-        level: 8,
+        level: 4,
         isCurrentlyUseful: true
     },
     {
+        id: '1',
         title: 'React',
         description: '',
         icon: 'react-original',
-        level: 8,
+        level: 4,
         isCurrentlyUseful: true
     },
     {
+        id: '2',
         title: 'Sass',
         description: '',
         icon: 'sass-original',
-        level: 7,
+        level: 3,
         isCurrentlyUseful: true
     },
     {
+        id: '3',
         title: 'Html5',
         description: '',
         icon: 'html5-plain',
-        level: 9,
+        level: 4,
         isCurrentlyUseful: true
     },
     {
+        id: '4',
         title: 'Javascript',
         description: '',
         icon: 'javascript-plain',
-        level: '',
+        level: 4,
         isCurrentlyUseful: true
     },
     {
+        id: '5',
         title: 'Python',
         description: '',
         icon: 'python-plain',
-        level: '',
+        level: 3,
         isCurrentlyUseful: true
     },
     {
+        id: '6',
         title: 'Java',
         description: '',
         icon: 'java-plain',
-        level: '',
+        level: 2,
         isCurrentlyUseful: false
     },
     {
+        id: '7',
         title: 'css3',
         description: '',
         icon: 'css3-plain',
-        level: '',
+        level: 4,
         isCurrentlyUseful: true
     },
     {
+        id: '8',
         title: 'express',
         description: '',
         icon: 'express-original',
-        level: 6,
+        level: 4,
         isCurrentlyUseful: true
     },
     {
+        id: '9',
         title: 'Android',
         description: '',
         icon: 'android',
-        level: 5,
+        level: 2,
         isCurrentlyUseful: false
     },
     {
+        id: '10',
         title: 'Redux',
         description: '',
         icon: 'redux-original',
-        level: 5,
+        level: 3,
         isCurrentlyUseful: true
     },
     {
+        id: '11',
         title: 'photoshop',
         description: '',
         icon: 'photoshop-plain',
-        level: '',
+        level: 1,
         isCurrentlyUseful: false
     },
     {
+        id: '12',
         title: 'mysql',
         description: '',
         icon: 'mysql-plain',
-        level: 8,
+        level: 3,
         isCurrentlyUseful: false
     },
 ]
@@ -100,12 +124,13 @@ const fetchAllSkills = async () => {
     return result;
 }
 
-const fetchSkill = async (id: number) => {
-    setTimeout(() => {
-
-    }, 1600);
-    
-    return result[id];
+const fetchSkill: (id: string) => Promise<skillType> = async (id) => {
+    return new Promise<skillType>((resolve, reject) => setTimeout(() => {
+        const indexValue = result
+        .map(item => item.id)
+        .indexOf(id)
+        resolve(result[indexValue]); 
+    }, 1000));
 }
 
 export {

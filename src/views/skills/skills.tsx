@@ -1,104 +1,73 @@
 import React, { useEffect, useState } from 'react';
 import IconContent from './components/IconContent';
+import BarSkill from './components/barSkill';
 import Loading from '../../components/loading';
+import SortLoading from '../../components/sortLoading';
 import { useTranslation } from 'react-i18next';
-import { iconItem } from './components/types'
+import { iconItem } from './components/types';
+import { skillType, fetchAllSkills, fetchSkill } from '../../services/skills';
 
 import './index.scss';
 
-const actuSkill: Array<iconItem> = [
-    {
-        id: 'node_js',
-        icon: 'nodejs-plain',
-    },
-    {
-        id: 'react',
-        icon: 'react-original',
-    },
-    {
-        id: 'sass',
-        icon: 'sass-original',
-    },
-    {
-        id: 'html5',
-        icon: 'html5-plain',
-    },
-]
-
-const mySkill: Array<iconItem> = [
-    {
-        id: 'trello',
-        icon: 'trello-plain',
-    },
-    {
-        id: 'javascript',
-        icon: 'javascript-plain',
-    },
-    {
-        id: 'python',
-        icon: 'python-plain',
-    },
-    {
-        id: 'java',
-        icon: 'java-plain',
-    },
-    {
-        id: 'css3',
-        icon: 'css3-plain',
-    },
-    {
-        id: 'express',
-        icon: 'express-original',
-    },
-    {
-        id: 'android',
-        icon: 'android-plain',
-    },
-    {
-        id: 'redux',
-        icon: 'redux-original',
-    },
-    {
-        id: 'photoshop',
-        icon: 'photoshop-plain',
-    },
-    {
-        id: 'mysql',
-        icon: 'mysql-plain',
-    }
-]
 
 const Skills: React.FC = () => {
+    const defaultListSkill: Array<skillType> = []
+    let defaultSkill: skillType|undefined;
     const { t } = useTranslation();
-    const [isLoading, setIsLoading] = useState(true); 
-    const [skill, displaySkill] = useState(actuSkill[0]);
 
-    const handleClickIconActu = (id: string) => {
-        const indexOfSkill = actuSkill
-        .map(item => item.id)
-        .indexOf(id);
-        displaySkill(actuSkill[indexOfSkill]); 
+    let defaultSkillDetail = {title: t("intermediate"), detail:t("intermediate_detail") }; 
+    const [isLoading, setIsLoading] = useState(true); 
+    const [actuSkills, setActuSkills] = useState(defaultListSkill);
+    const [mySkills, setMySkills] = useState(defaultListSkill);
+    const [skill, displaySkill] = useState(defaultSkill);
+    const [skillDetail, setSkillDetail] = useState(defaultSkillDetail);
+    const [isLoadingDisplay, setIsLoadingDisplay] = useState(true);
+
+    const renderLevelDetail = (level: number) => {
+        if (level <= 1)
+            return {title: t("basic"), detail:t("basic_detail") };
+        else if (level == 2)
+            return {title: t("intermediate"), detail:t("intermediate_detail") };
+        else if (level == 3)
+            return {title: t("advance"), detail:t("advance_detail") };
+        else if (level >= 4)
+            return {title: t("expert"), detail:t("expert_detail") };
+        return {title: t("intermediate"), detail:t("intermediate_detail") };;
     }
 
-    const handleClickIconKnow = (id: string) => {
-        const indexOfSkill = mySkill
-        .map(item => item.id)
-        .indexOf(id);
-        displaySkill(mySkill[indexOfSkill]); 
+    const handleClickIcon = async (id: string) => {
+        setIsLoadingDisplay(true);
+        const skill = await fetchSkill(id);
+        displaySkill(skill);
+        setIsLoadingDisplay(false);
+        setSkillDetail(renderLevelDetail(skill.level));
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
+        const fetchData = async () => {
+            const skills = await fetchAllSkills();
+            const actu: Array<skillType> = skills.filter(item => item.isCurrentlyUseful);
+            const knew: Array<skillType> = skills.filter(item => !item.isCurrentlyUseful);
+
+            setActuSkills(actu);
+            setMySkills(knew);
+            displaySkill(actu[0]);
             const skillsComponent = document.getElementById('skills');
             if (skillsComponent) {
                 skillsComponent.style.opacity = '1'; 
             }
+            setIsLoadingDisplay(false);
+            setIsLoading(false);
+        }
+        setTimeout(() => {
+            setIsLoading(false);
         }, 3500);
+        
+        fetchData();
     }, [isLoading]);
 
     return (
-        isLoading ?
+        isLoading  ?
                     <Loading />
                   :
                     <div id="skills" className="container">
@@ -110,32 +79,42 @@ const Skills: React.FC = () => {
                                     <div className="skills">
                                         <div className="skills-wrapper">
                                             <IconContent 
-                                                icons={actuSkill} 
-                                                onChangeIconSelected={(id: string) => handleClickIconActu(id)}
-                                                idIconSelected={skill.id} />
+                                                icons={actuSkills} 
+                                                onChangeIconSelected={(id: string) => handleClickIcon(id)}
+                                                idIconSelected={skill !== undefined? skill.id : '0'} />
                                         </div>
                                     </div>
                                     <h3><i className="fas fa-code-branch" /> { t('tools') }</h3>
                                     <div className="skills">
                                         <div className="skills-wrapper">
                                             <IconContent 
-                                                icons={mySkill} 
-                                                onChangeIconSelected={(id: string) => handleClickIconKnow(id)}
-                                                idIconSelected={skill.id} />
+                                                icons={mySkills} 
+                                                onChangeIconSelected={(id: string) => handleClickIcon(id)}
+                                                idIconSelected={skill !== undefined? skill.id : '0'} />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="content-right col-md-6">
                                 <div className="skill-info">
-                                    <div className="skill-info-wrapper">
-                                        <div className="icon-wrapper">
-                                            <i className={`fab devicon-${skill.icon} colored`} />
-                                        </div>
-                                        <div className="paragraph">
-                                            <h3>{skill.id}</h3>
-                                        </div>
-                                    </div>
+                                    {
+                                        isLoadingDisplay ?
+                                                        <SortLoading />
+                                                        :
+                                                        <div className="skill-info-wrapper">
+                                                            <div className="icon-wrapper">
+                                                                <i className={`fab devicon-${skill?.icon} colored`} />
+                                                            </div>
+                                                            <div className="paragraph">
+                                                                <h3>{skill?.title}</h3>
+                                                            </div>
+                                                            <BarSkill level={skill?.level ? skill.level : 0} />
+                                                            <div className="detail">
+                                                                <h5>{skillDetail.title}</h5>
+                                                                <p>{skillDetail.detail}</p>
+                                                            </div>
+                                                        </div>
+                                    }
                                 </div>
                             </div>
                         </div>
