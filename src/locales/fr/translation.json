@@ -1,5 +1,13 @@
 {
     "welcom" : "mon premier projet i18next",
+    "intermediate": "intermédiare",
+    "basic": "basique",
+    "advance": "avancer",
+    "expert": "expert",
+    "basic_detail": "Je connais des choses de base. En fait, je ne peux pas faire de projet complexe.",
+    "intermediate_detail": "J'ai peu d'expérience avec ça. Mais je peux à peine faire un projet complexe",
+    "advance_detail": "J'ai une certaine expérience avec ça. Je peux faire des projets complexes",
+    "expert_detail": "J'ai une expérience avec ça. J'ai travaillé sur beaucoup de projets.",
     "home": "Accueil",
     "about_me": "Au sujet de moi",
     "skills": "Skills",

@@ -1,5 +1,13 @@
 {
     "welcom" : "Setup my first change i18next",
+    "intermediate": "intermediate",
+    "basic": "basic",
+    "advance": "advance",
+    "expert": "expert",
+    "basic_detail": "I know basic things. Actually, I can't make complex project.",
+    "intermediate_detail": "I have little experience with that. But I can barely make a complex project.",
+    "advance_detail": "I have some experience with that. I can make complex project.",
+    "expert_detail": "I have an experience with that. I worked on a lot of projects.",
     "home": "Home",
     "about_me": "About Me",
     "skills": "Skills",
