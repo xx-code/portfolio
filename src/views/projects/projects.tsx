@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../../components/loading';
 import ProjectList from './components/ProjectList';
 import imag from '../../images/project.jpg';
+import { useTranslation } from 'react-i18next';
 
 import './index.scss';
 
@@ -63,6 +64,7 @@ const fakeData = [
 ]
 
 const Projects: React.FC = () => {
+    const { t } = useTranslation();
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -80,8 +82,13 @@ const Projects: React.FC = () => {
                     <Loading />
                   :
 
-                    <div id="projects" className="container-fluid">
-                        <ProjectList list={fakeData} />
+                    <div id="projects" className="container">
+                        <div className="row custom-row">
+                            <div className="content">
+                                <h1>{ t('projects') }</h1>
+                                <ProjectList list={fakeData} />
+                            </div>
+                        </div>
                     </div>
     );
 };

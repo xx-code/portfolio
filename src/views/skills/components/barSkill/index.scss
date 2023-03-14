@@ -2,7 +2,7 @@
 
 .bar-skill-wrapper {
     margin: 3px;
-    width: 80%;
+    width: 60%;
     .bar-skill {
         padding: 5px;
         border: $pink solid 1px;
@@ -10,7 +10,7 @@
         align-self: center;
         flex-direction: row;
         .bar-wrapper {
-            height: 30px;
+            height: 25px;
             flex: 1;
             margin: 3px;
             .bar {
