@@ -17,7 +17,7 @@ declare global {
 interface Props {
     link: string,
     text?: string,
-    icon: string,
+    icon: any,
     selected: boolean
 };
 
