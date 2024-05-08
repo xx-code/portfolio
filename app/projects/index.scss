@@ -1,0 +1,25 @@
+@import '../colors.scss';
+
+#projects {
+    opacity: 0;
+    transition: opacity ease-in-out 100ms;
+    display: flex;
+    height: 80vh;
+    .custom-row {
+        height: 100%;
+        width: inherit;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: inherit;
+    }
+    h1 {
+        color: $blue;
+        font-size: 45px;
+        font-weight: bold;
+        margin-top: 25px;
+        margin-bottom: 58px;
+    }
+}

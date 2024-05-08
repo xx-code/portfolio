@@ -1,0 +1,210 @@
+@import '../colors.scss';
+
+@mixin rotate-animation($duration, $itiration) {
+    $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $itiration;
+}
+
+#navbar {
+    background-color: $high-dark;
+    width: 90px;
+    position: fixed;
+    height: 100%;
+    z-index: 5;
+    @media (max-width: 768px) {
+        height: 70px;
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    .logo {
+        background-color: $black;
+        width: 90px;
+        @media (max-width: 768px) {
+            width: 70px;
+            position: static;
+        }
+        .wrapper-logo {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            height: 100%;
+            img {
+                height: 65px;
+                @include rotate-animation(2s, 1) {
+                    from { transform: rotate(0deg); }
+                    to {transform: rotate(360deg);}
+                }
+                @media (max-width: 768px) {
+                    height: 45px;
+                }
+            }
+        }
+    }
+    .hamburger-btn {
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+        }
+        .hamburger-btn-wrapper {
+            padding: 15px;
+            .bar {  
+                position: relative;
+                background: $high-gray;
+                width: 28px;
+                height: 2px;
+                &:hover {
+                    color: $blue;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: $high-gray;
+                    top: 7px;
+                    width: 28px;
+                    height: 2px;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background: $high-gray;
+                    top: -7px;
+                    width: 28px;
+                    height: 2px;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+
+            .close {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                &::before, &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 14px;
+                    content: '';
+                    height: 30px;
+                    width: 2px;
+                    background-color: $high-gray;
+                }
+                &::before {
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.navbar-items {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+        display: none;
+    }
+    .navbar-items-wrapper {
+        padding: 10px 5px;
+        margin: 0;
+        list-style-type: none;
+        .navlink {
+            a {
+                text-decoration: none;
+                .navlink-wrapper {
+                    text-align: center;
+                    color: $high-gray;
+                    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+                    margin-bottom: 42px;
+                    margin-top: 42px;
+                    .icon {
+                        font-size: 32px;
+                    }
+                    p {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 0;
+                        transition: font-size cubic-bezier(0.19, 1, 0.22, 1) 150ms;
+                        margin: 0;
+                        text-transform: uppercase;
+                    }
+                    &:hover {
+                        color: $blue;
+                        p {
+                            font-size: 14px;
+                        }
+                    }   
+                }
+                .active {
+                    color: $blue !important;
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-items-responsive {
+    position: absolute;
+    left: -15000px;
+    z-index: -2;
+    transition: left cubic-bezier(1, 0, 0, 1) 350ms;
+    width: 100%;
+    .navbar-items-wrapper {
+        z-index: -2;
+        list-style-type: none;
+        display: flex;
+        
+        justify-content: space-around;
+        background-color: $high-dark;
+        border-top: solid 1px $high-gray;
+        padding: 10px 0;
+        .navlink {
+            a {
+                z-index: -2;
+                text-decoration: none;
+                .navlink-wrapper {
+                    text-align: center;
+                    color: $high-gray;
+                    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+                    p {
+                        display: none;
+                    }
+                    ion-icon {
+                        font-size: 28px;
+                    }
+                    &:hover {
+                        color: $blue;
+                    }   
+                }
+                .active {
+                    color: $blue !important;
+                }
+            }
+        }
+    }
+}
