@@ -3,9 +3,6 @@ services:
     build:
       context: .
       dockerfile: dockerfile
-    ports:
-      - "3000:3000"
-
   caddy:
     image: caddy:2.7-alpine
     restart: unless-stopped
