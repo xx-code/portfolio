@@ -3,9 +3,13 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import './colors.scss';
 import './index.scss';
-import './i18n';
-import Navbar from "./navbar/navbar";
-import Maintening from "./maintening";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
+
+import Navbar from "./[locale]/navbar/navbar";
+import Maintening from "./[locale]/maintening";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
@@ -17,22 +21,33 @@ export const metadata: Metadata = {
   description: "in progress..",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: {locale}
 }: Readonly<{
   children: React.ReactNode;
+  params: {locale: string}
 }>) {
+  // Ensure that the incoming `locale` is valid
+ 
+ 
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
     <html lang="en">
       <head>
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       <body className={montserrat.className}>
-{/*         <Navbar />
-        <div id="page-content">
-          {children}
-        </div> */}
-        <Maintening />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar lang={locale} />
+          <div id="page-content">
+            {children}
+          </div>
+          {/* <Maintening /> */}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
