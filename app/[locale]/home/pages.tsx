@@ -6,10 +6,12 @@ import Button from '../../components/button';
 import Loading from '../../components/loading';
 import Image from 'next/image';
 
+
 import './index.scss';
 
 import logo from '../../images/logo.png';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 export function Home() {
 
@@ -17,6 +19,7 @@ export function Home() {
     
     const [opacity, setOpacity] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
+    const router = useRouter()
 
     useEffect(() => {
         setTimeout(() => {

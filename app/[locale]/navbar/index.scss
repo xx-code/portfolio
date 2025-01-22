@@ -13,12 +13,13 @@
 }
 
 #navbar {
+    display: flex;
     background-color: $high-dark;
-    width: 90px;
+    width: 100%;
     position: fixed;
-    height: 100%;
     z-index: 5;
     @media (max-width: 768px) {
+        flex-direction: row;
         height: 70px;
         width: 100%;
         position: relative;
@@ -29,28 +30,46 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     z-index: 4;
     .logo {
-        background-color: $black;
-        width: 90px;
         @media (max-width: 768px) {
-            width: 70px;
             position: static;
         }
         .wrapper-logo {
+            cursor: pointer;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 10px;
             height: 100%;
-            img {
-                height: 65px;
-                @include rotate-animation(2s, 1) {
-                    from { transform: rotate(0deg); }
-                    to {transform: rotate(360deg);}
+            font-weight: 500;
+            .logo-name-first {
+                color:$blue;
+                .logo-name-first-high {
+                    position: relative;
+                    &:hover {
+                        color:$pink;
+                        top: -5px;
+                    }
+                    // @include rotate-animation(500ms, 1) {
+                    //     from { top: 0; }
+                    //     to {top: -5px}
+                    // }
                 }
-                @media (max-width: 768px) {
-                    height: 45px;
+                margin-right: 5px;
+            }
+            .logo-name-last {
+                color: $pink;
+                .logo-name-last-high {
+                    position: relative;
+                    &:hover {
+                        color:$blue;
+                        top: -5px;
+                    }
+                    // @include rotate-animation(1000ms, 1) {
+                    //     from { top: 0; }
+                    //     to {top: -5px}
+                    // }
                 }
             }
         }
@@ -58,7 +77,8 @@
     .hamburger-btn {
         display: none;
         @media (max-width: 768px) {
-            display: block;
+            display: flex;
+            align-items: center;
         }
         .hamburger-btn-wrapper {
             padding: 15px;
@@ -119,33 +139,32 @@
 }
 
 .navbar-items {
-    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: row;
     @media (max-width: 768px) {
         display: none;
     }
     .navbar-items-wrapper {
-        padding: 10px 5px;
+        display: flex;
         margin: 0;
         list-style-type: none;
         .navlink {
+            padding-inline: 10px;
             a {
                 text-decoration: none;
                 .navlink-wrapper {
                     text-align: center;
                     color: $high-gray;
                     transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
-                    margin-bottom: 42px;
-                    margin-top: 42px;
                     .icon {
                         font-size: 32px;
+                        display: none;
                     }
                     p {
                         font-style: normal;
                         font-weight: bold;
-                        font-size: 0;
+                        font-size: 12px;
                         transition: font-size cubic-bezier(0.19, 1, 0.22, 1) 150ms;
                         margin: 0;
                         text-transform: uppercase;

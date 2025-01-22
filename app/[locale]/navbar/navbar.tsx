@@ -39,12 +39,43 @@ export default function Navbar({lang}: {lang: string}) {
 
     return(
         <div id="navbar">
-            <div className="header"> 
+            <div className="header container" > 
                 <div className="logo">
                     <div className="wrapper-logo">
-                        <Image className='img' height={65} src={logo} alt="logo-short"  />
+                        <p className='logo-name-first'><span className='logo-name-first-high'>Au</span>guste</p>
+                        <p className='logo-name-last'>Tiem<span className='logo-name-last-high'>ele</span></p>
                     </div>
                 </div>
+                <div className="navbar-items">
+                    <ul className="navbar-items-wrapper">
+                        <NavLink 
+                            text={t('home')} 
+                            icon="fa-solid fa-house"
+                            link="#home"
+                            selected={ currentLocation === '/' } />
+                        <NavLink 
+                            text={t('about_me')}
+                            icon="fa-solid fa-user"
+                            link={`#about-me`} 
+                            selected={ currentLocation === '/about' } />
+                        <NavLink 
+                            text={t('skills')}
+                            icon="fa-solid fa-gear"
+                            link={`#skills`} 
+                            selected={ currentLocation === '/skills' } />
+                        <NavLink 
+                            text={t('projects')} 
+                            icon="fa-solid fa-file"
+                            link={`#projects`} 
+                            selected={ currentLocation === '/projects'} />
+                        <NavLink 
+                            text={t('contact')}
+                            icon="fa-solid fa-envelope" 
+                            link={`#contact`} 
+                            selected={ currentLocation === '/contact' } />
+                    </ul>
+                </div>
+
                 <div className="hamburger-btn">
                     <div className="hamburger-btn-wrapper"  onClick={() => handleHambugerElement()}>
                         <div id="hamburger-element" className="bar" ></div>
@@ -52,35 +83,6 @@ export default function Navbar({lang}: {lang: string}) {
                 </div>
             </div>
             
-            <div className="navbar-items">
-                <ul className="navbar-items-wrapper">
-                    <NavLink 
-                        text={t('home')} 
-                        icon="fa-solid fa-house"
-                        link="/"
-                        selected={ currentLocation === '/' } />
-                    <NavLink 
-                        text={t('about_me')}
-                        icon="fa-solid fa-user"
-                        link={`/${lang}/aboutMe`} 
-                        selected={ currentLocation === '/about' } />
-                    <NavLink 
-                        text={t('skills')}
-                        icon="fa-solid fa-gear"
-                        link={`/${lang}/skills`} 
-                        selected={ currentLocation === '/skills' } />
-                    <NavLink 
-                        text={t('projects')} 
-                        icon="fa-solid fa-file"
-                        link={`/${lang}/projects`} 
-                        selected={ currentLocation === '/projects'} />
-                    <NavLink 
-                        text={t('contact')}
-                        icon="fa-solid fa-envelope" 
-                        link={`/${lang}/contact`} 
-                        selected={ currentLocation === '/contact' } />
-                </ul>
-            </div>
             <div id="navbar-items-behavior" className="navbar-items-responsive">
                 <ul className="navbar-items-wrapper">
                     <NavLink 
