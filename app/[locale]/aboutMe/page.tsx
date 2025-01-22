@@ -32,7 +32,7 @@ export default function AboutMe() {
         isLoading ?
                     <Loading />
                   :
-                    <div id="about-me" className="container-fluid">
+                    <div id="about-me" className="container">
                         <div className="flex">
                             <div className="content-left col-md-8">
                                 <h1>{t('about_me')}</h1>
