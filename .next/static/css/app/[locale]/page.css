@@ -1,0 +1,1108 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/components/loading/index.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+#loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: #0E0E10;
+}
+#loading .loading-wrapper {
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loading .loading-wrapper .logo .logo-wrapper {
+  height: 80px;
+}
+#loading .loading-wrapper .logo .logo-wrapper img {
+  height: 100%;
+  animation-delay: 0;
+  animation-name: inline-u8e7m6j;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+}
+@keyframes inline-u8e7m6j {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#loading .loading-wrapper .loading-info p {
+  padding: 0;
+  margin: 0;
+  color: #FFFFFF;
+}
+#loading .loading-wrapper .loading-info p .dot-1 {
+  margin-left: 2px;
+  font-size: 18px;
+  margin-right: 2px;
+  animation-delay: 0;
+  animation-name: inline-u8e7m7i;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes inline-u8e7m7i {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#loading .loading-wrapper .loading-info p .dot-2 {
+  margin-right: 2px;
+  animation-delay: 300ms;
+  animation-name: inline-u8e7m84;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes inline-u8e7m84 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#loading .loading-wrapper .loading-info p .dot-3 {
+  margin-right: 2px;
+  animation-delay: 6500ms;
+  animation-name: inline-u8e7m90;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes inline-u8e7m90 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#loading .loading-wrapper .load-bar .load-bar-wrapper {
+  margin-top: 18px;
+  width: 350px;
+  border: 1px solid #8B8B8B;
+}
+#loading .loading-wrapper .load-bar .load-bar-wrapper .bar {
+  background-color: #8B8B8B;
+  margin: 5px;
+  width: 0%;
+  height: 8px;
+  animation-delay: 0;
+  animation-name: inline-u8e7m9f;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes inline-u8e7m9f {
+  from {
+    width: 0;
+    background-color: #8B8B8B;
+  }
+  to {
+    width: 96.9%;
+    background-color: #0C83FD;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/components/popUpOverlay/index.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.popup-overlay {
+  z-index: 8;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms;
+}
+.popup-overlay .back {
+  transition: opacity ease-in-out 600ms;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-overlay .wrapper {
+  z-index: 12;
+  padding: 30px;
+}
+
+.open-popup {
+  top: 0;
+}
+.open-popup .back {
+  opacity: 1;
+}
+
+.close-popup {
+  top: -5000px;
+  opacity: 0;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/aboutMe/components/timeline/index.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.time-line {
+  position: relative;
+}
+.time-line .time-line-wrapper .time-bar {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #0C83FD;
+}
+.time-line .time-line-wrapper .time-bar::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  height: 10px;
+  width: 1px;
+  background-color: #0C83FD;
+}
+.time-line .time-line-wrapper .time-bar::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -5px;
+  height: 10px;
+  width: 1px;
+  background-color: #0C83FD;
+}
+.time-line .time-line-wrapper .label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.time-line .time-line-wrapper .label .label-right {
+  color: #626262;
+  font-size: 14px;
+}
+.time-line .time-line-wrapper .label .label-left {
+  color: #626262;
+  font-size: 14px;
+}
+.time-line .time-line-wrapper .time-line-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.time-line .time-line-wrapper .time-line-bar .bar {
+  cursor: pointer;
+  position: relative;
+  width: 98%;
+  height: 5px;
+  margin-bottom: 15px;
+}
+.time-line .time-line-wrapper .time-line-bar .bar .bar-content {
+  position: absolute;
+  height: 5px;
+  width: 0;
+  transition: width ease-in 350ms;
+}
+.time-line .time-line-wrapper .time-line-bar .bar .bar-content span {
+  top: -18px;
+  position: absolute;
+  font-size: 12px;
+}
+
+.info-time {
+  width: 600px;
+}
+@media (max-width: 630px) {
+  .info-time {
+    width: 300px;
+  }
+}
+@media (max-width: 340px) {
+  .info-time {
+    width: 220px;
+  }
+}
+.info-time .info-time-wrapper {
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+.info-time .info-time-wrapper h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+@media (max-width: 630px) {
+  .info-time .info-time-wrapper h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 340px) {
+  .info-time .info-time-wrapper h2 {
+    font-size: 24px;
+  }
+}
+.info-time .info-time-wrapper .para h3 {
+  font-size: 28px;
+  color: #0C83FD;
+  font-weight: bold;
+}
+@media (max-width: 630px) {
+  .info-time .info-time-wrapper .para h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 340px) {
+  .info-time .info-time-wrapper .para h3 {
+    font-size: 18px;
+  }
+}
+.info-time .info-time-wrapper .para p {
+  color: #626262;
+}
+@media (max-width: 630px) {
+  .info-time .info-time-wrapper .para p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 340px) {
+  .info-time .info-time-wrapper .para p {
+    font-size: 14px;
+  }
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/aboutMe/index.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+#about-me {
+  opacity: 0;
+  transition: opacity ease-in-out 100ms;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about-me .content-left h1 {
+  color: #0C83FD;
+  font-weight: bold;
+  margin-bottom: 58px;
+  text-transform: capitalize;
+}
+#about-me .content-left .paragraph {
+  color: #FFFFFF;
+  padding-left: 0;
+}
+#about-me .content-left .paragraph p {
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  #about-me .content-left h1 {
+    font-size: 42px;
+  }
+  #about-me .content-left .paragraph p {
+    font-size: 16px;
+  }
+  #about-me .content-right {
+    display: none;
+  }
+}
+#about-me .content-right .bubble .bubble-wrapper {
+  position: relative;
+}
+#about-me .content-right .bubble .bubble-wrapper .bubble-A {
+  background-color: #ED1E79;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  top: 100px;
+  left: 50px;
+  position: absolute;
+  animation-name: inline-u0olbyx;
+  animation-duration: 3400ms;
+  animation-iteration-count: 1;
+  opacity: 1;
+}
+#about-me .content-right .bubble .bubble-wrapper .bubble-A h1 {
+  font-size: 120px;
+  color: #FFFFFF;
+  font-weight: bold;
+  transform: rotate(-17deg);
+  position: absolute;
+  left: 50px;
+  top: 25px;
+}
+@keyframes inline-u0olbyx {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#about-me .content-right .bubble .bubble-wrapper .bubble-B {
+  z-index: -3;
+  position: absolute;
+  background-color: #FFB801;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  top: 100px;
+  left: -70px;
+  animation-name: inline-u0olbzr;
+  animation-duration: 1200ms;
+  animation-iteration-count: 1;
+  opacity: 0.4;
+}
+@keyframes inline-u0olbzr {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+#about-me .content-right .bubble .bubble-wrapper .bubble-C {
+  z-index: -3;
+  position: absolute;
+  background-color: #0C83FD;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  right: 0;
+  top: 30px;
+  animation-name: inline-u0olc09;
+  animation-duration: 1800ms;
+  animation-iteration-count: 1;
+  opacity: 0.4;
+}
+@keyframes inline-u0olc09 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+#about-me .content-right .bubble .bubble-wrapper .bubble-D {
+  z-index: -3;
+  position: absolute;
+  background-color: #0fa958;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  top: 200px;
+  right: 35px;
+  animation-name: inline-u0olc0o;
+  animation-duration: 2600ms;
+  animation-iteration-count: 1;
+  opacity: 0.4;
+}
+@keyframes inline-u0olc0o {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/components/button/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.button {
+  padding: 19px 40px;
+  background: none;
+  border: none;
+  color: #0C83FD;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.button:focus {
+  outline: none;
+}
+@media (max-width: 768px) {
+  .button {
+    padding: 12px 32px;
+    font-size: 1rem;
+  }
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/components/inputText/index.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.input-text-wrapper {
+  width: 100%;
+  margin-bottom: 39px;
+}
+.input-text-wrapper input:-webkit-autofill,
+.input-text-wrapper input:-webkit-autofill:hover,
+.input-text-wrapper input:-webkit-autofill:focus,
+.input-text-wrapper textarea:-webkit-autofill,
+.input-text-wrapper textarea:-webkit-autofill:hover,
+.input-text-wrapper textarea:-webkit-autofill:focus,
+.input-text-wrapper select:-webkit-autofill,
+.input-text-wrapper select:-webkit-autofill:hover,
+.input-text-wrapper select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0px 1000px #0E0E10 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.input-text-wrapper .input {
+  position: relative;
+  width: 100%;
+  padding: 19px 1px 19px 22px;
+  background-color: #0E0E10;
+  border: none;
+  color: white;
+}
+.input-text-wrapper .input:focus {
+  outline: solid #0C83FD 1px;
+  background-color: #0E0E10;
+}
+.input-text-wrapper .input-indicator {
+  height: 2px;
+  width: 100%;
+  transition: background-color ease-out 350ms;
+}
+.input-text-wrapper .input-textarea {
+  border: 2px solid #0C83FD;
+}
+.input-text-wrapper .error {
+  font-size: 12px;
+  color: #EA2D2E;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/contact/index.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+#contact {
+  opacity: 0;
+  transition: opacity ease-in-out 100ms;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .content-left h1 {
+  color: #0C83FD;
+  font-weight: bold;
+  margin-bottom: 58px;
+  text-transform: capitalize;
+}
+#contact .content-left .contact-form .contact-form-wrapper .contact-button {
+  border: 1px solid #0C83FD;
+}
+#contact .content-left .contact-form .contact-form-wrapper .contact-button:hover {
+  border-color: #626262;
+  color: #626262;
+}
+#contact .content-right {
+  background-color: #0E0E10;
+  position: relative;
+  height: 100%;
+  width: 600px;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 1340px) {
+  #contact .content-right {
+    width: 500px;
+  }
+}
+@media (max-width: 1115px) {
+  #contact .content-right {
+    width: 450px;
+  }
+}
+@media (max-width: 1000px) {
+  #contact .content-right {
+    width: 400px;
+  }
+}
+@media (max-width: 880px) {
+  #contact .content-right {
+    width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  #contact .content-right {
+    margin-top: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 800px;
+  }
+}
+#contact .content-right .content-wrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#contact .content-right .content-wrapper img {
+  height: 100px;
+  margin-bottom: 29px;
+  transform: rotate(-17deg);
+  opacity: 0.5;
+}
+#contact .content-right .content-wrapper .link {
+  margin-bottom: 15px;
+}
+#contact .content-right .content-wrapper .link .link-wrapper p {
+  color: #626262;
+}
+#contact .content-right .content-wrapper .link .link-wrapper .link-icon {
+  margin-left: -15px;
+}
+#contact .content-right .content-wrapper .link .link-wrapper .link-icon .active {
+  color: #0C83FD;
+}
+#contact .content-right .content-wrapper .link .link-wrapper .link-icon i {
+  cursor: pointer;
+  padding: 15px;
+}
+#contact .content-right .content-wrapper .link .link-wrapper .link-icon i:hover {
+  color: #0C83FD;
+}
+#contact .content-right .content-wrapper .content-button .content-button-wrapper p {
+  color: #626262;
+}
+#contact .content-right .content-wrapper .content-button .content-button-wrapper .visit-button {
+  color: #FFFFFF;
+  background-color: #0C83FD;
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#contact .content-right .content-wrapper .band {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+#contact .content-right .content-wrapper .band .band-1 {
+  height: 60px;
+  background-color: #ED1E79;
+  margin-bottom: 20px;
+}
+#contact .content-right .content-wrapper .band .band-2 {
+  height: 60px;
+  background-color: #0C83FD;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/home/index.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+#home {
+  opacity: 0;
+  transition: opacity ease-in-out 100ms;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+#home .btn-wrapper {
+  margin-top: 34px;
+}
+#home .btn-wrapper .contact-btn {
+  border: 1px solid #0C83FD;
+}
+#home .btn-wrapper .contact-btn:hover {
+  border-color: #626262;
+  color: #626262;
+}
+#home .welcome .welcome-wrapper .para {
+  line-height: 53px;
+  margin-bottom: 0;
+  width: fit-content;
+  cursor: default;
+  position: relative;
+}
+#home .welcome .welcome-wrapper .para .letter {
+  position: relative;
+  color: #FFFFFF;
+  font-weight: bolder;
+  font-size: 4.15rem;
+  top: 0;
+  transition: top cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
+}
+#home .welcome .welcome-wrapper .para .letter:hover {
+  top: 8px;
+  color: #0C83FD;
+}
+@media (max-width: 1199px) {
+  #home .welcome .welcome-wrapper .para .letter {
+    font-size: 3.75rem;
+  }
+}
+@media (max-width: 1029px) {
+  #home .welcome .welcome-wrapper .para .letter {
+    font-size: 3.25rem;
+    line-height: 48px;
+  }
+}
+@media (max-width: 998px) {
+  #home .welcome .welcome-wrapper .para .letter {
+    font-size: 2.75rem;
+    line-height: 43px;
+  }
+}
+@media (max-width: 796px) {
+  #home .welcome .welcome-wrapper .para .letter {
+    font-size: 2.5rem;
+    line-height: 38px;
+  }
+}
+@media (max-width: 750px) {
+  #home .welcome .welcome-wrapper .para .letter {
+    font-size: 2.25rem;
+    line-height: 33px;
+  }
+}
+@media (max-width: 450px) {
+  #home .welcome .welcome-wrapper .para .letter {
+    font-size: 2rem;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1029px) {
+  #home .welcome .welcome-wrapper .para {
+    line-height: 48px;
+  }
+}
+@media (max-width: 991px) {
+  #home .welcome .welcome-wrapper .para {
+    line-height: 43px;
+  }
+}
+@media (max-width: 796px) {
+  #home .welcome .welcome-wrapper .para {
+    line-height: 38px;
+  }
+}
+@media (max-width: 750px) {
+  #home .welcome .welcome-wrapper .para {
+    line-height: 33px;
+  }
+}
+@media (max-width: 450px) {
+  #home .welcome .welcome-wrapper .para {
+    line-height: 28px;
+  }
+}
+#home .welcome .welcome-wrapper .para .blue-letter {
+  color: #0C83FD !important;
+}
+#home .welcome .welcome-wrapper .para .pink-letter {
+  color: #ED1E79 !important;
+}
+#home .welcome .job-info {
+  color: #626262;
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 34px;
+}
+@media (max-width: 768px) {
+  #home .welcome .job-info {
+    font-size: 16px;
+  }
+}
+#home .logo-wrapper {
+  width: 400px;
+}
+@media (max-width: 1299px) {
+  #home .logo-wrapper {
+    width: 350px;
+  }
+}
+@media (max-width: 1146px) {
+  #home .logo-wrapper {
+    width: 320px;
+  }
+}
+@media (max-width: 1103px) {
+  #home .logo-wrapper {
+    width: 275px;
+  }
+}
+@media (max-width: 992px) {
+  #home .logo-wrapper {
+    width: 225px;
+  }
+}
+@media (max-width: 851px) {
+  #home .logo-wrapper {
+    width: 200px;
+  }
+}
+@media (max-width: 793px) {
+  #home .logo-wrapper {
+    width: 180px;
+  }
+}
+#home .logo-wrapper img {
+  width: 100%;
+  transform: rotate(-17deg);
+  margin-left: -15px;
+  margin-top: -55px;
+  animation-name: inline-u0olbyw;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes inline-u0olbyw {
+  from {
+    transform: rotate(0deg) scaleX(1.3) scaleY(1.3);
+  }
+  to {
+    transform: rotate(343deg) scaleX(1) scaleY(1);
+  }
+}
+@media (max-width: 1299px) {
+  #home .logo-wrapper img {
+    margin-left: -15px;
+  }
+}
+@media (max-width: 1103px) {
+  #home .logo-wrapper img {
+    margin-top: -52px;
+  }
+}
+@media (max-width: 992px) {
+  #home .logo-wrapper img {
+    margin-top: -45px;
+    margin-left: -25px;
+  }
+}
+@media (max-width: 851px) {
+  #home .logo-wrapper img {
+    margin-top: -40px;
+    margin-left: -30px;
+  }
+}
+@media (max-width: 793px) {
+  #home .logo-wrapper img {
+    margin-left: -55px;
+  }
+}
+@media (max-width: 769px) {
+  #home .logo-wrapper img {
+    display: none;
+  }
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/projects/components/ProjectList/index.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.project-list-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/projects/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+#projects {
+  opacity: 0;
+  transition: opacity ease-in-out 100ms;
+  display: flex;
+  height: 100vh;
+}
+#projects .custom-row {
+  height: 100%;
+  width: inherit;
+}
+#projects .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: inherit;
+}
+#projects h1 {
+  color: #0C83FD;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 58px;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/skills/components/IconContent/index.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.icon-content .icon-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.icon-content .icon-content-wrapper .icon-touch .icon-touch-wrapper {
+  cursor: pointer;
+  padding: 15px;
+}
+.icon-content .icon-content-wrapper .icon-touch .icon-touch-wrapper .icon {
+  transition: opacity ease-in 350ms;
+  font-size: 50px;
+  opacity: 0.5;
+}
+.icon-content .icon-content-wrapper .icon-touch .icon-touch-wrapper .icon:hover {
+  opacity: 1;
+}
+.icon-content .icon-content-wrapper .icon-touch .icon-touch-wrapper .icon-selected {
+  opacity: 1;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/skills/components/barSkill/index.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+.bar-skill-wrapper {
+  margin: 3px;
+  width: 60%;
+}
+.bar-skill-wrapper .bar-skill {
+  padding: 5px;
+  border: #ED1E79 solid 1px;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+}
+.bar-skill-wrapper .bar-skill .bar-wrapper {
+  height: 25px;
+  flex: 1;
+  margin: 3px;
+}
+.bar-skill-wrapper .bar-skill .bar-wrapper .bar {
+  width: 100%;
+  height: 100%;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[13].use[5]!./app/[locale]/skills/index.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+:export {
+  black: #000000;
+  white: #FFFFFF;
+  error-color: #EA2D2E;
+  gray: #8B8B8B;
+  high-gray: #626262;
+  blue: #0C83FD;
+  pink: #ED1E79;
+  dark: #1A1A1D;
+  high-dark: #0E0E10;
+}
+
+#skills {
+  opacity: 0;
+  transition: opacity ease-in-out 100ms;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .content-left h1 {
+  color: #0C83FD;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 58px;
+}
+#skills .content-left .skills-use h3 {
+  color: #626262;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#skills .content-left .skills-use h3 i {
+  margin-right: 15px;
+}
+#skills .content-left .skills-use .skills .skills-wrapper {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+#skills .content-right .skill-info {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#skills .content-right .skill-info .skill-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#skills .content-right .skill-info .skill-info-wrapper .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+#skills .content-right .skill-info .skill-info-wrapper .icon-wrapper i {
+  font-size: 125px;
+  align-items: center;
+}
+#skills .content-right .skill-info .skill-info-wrapper .paragraph h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+#skills .content-right .skill-info .skill-info-wrapper .detail {
+  color: #FFFFFF;
+  margin-top: 16px;
+}
+#skills .content-right .skill-info .skill-info-wrapper .detail h5 {
+  font-weight: 500;
+  text-align: center;
+  color: #626262;
+  font-weight: bold;
+}
+#skills .content-right .skill-info .skill-info-wrapper .detail p {
+  text-align: center;
+}
