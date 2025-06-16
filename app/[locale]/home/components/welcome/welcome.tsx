@@ -1,16 +1,3 @@
-import React from 'react';
-<<<<<<<< HEAD:app/[locale]/home/components/welcome/welcome.tsx
-import { useTranslation } from 'react-i18next';
-import { targetLetter } from '../types';
-import switchColor from '../utils/switchColor';
-
-interface Props {
-    letters: [string],
-    highLetters: Array<targetLetter>
-};
-
-
-========
 import { targetLetter } from '../types';
 import switchColor from '../utils/switchColor';
 import { useTranslations } from 'next-intl';
@@ -21,7 +8,6 @@ interface Props {
 };
 
 
->>>>>>>> main:app/[locale]/home/components/welcome/index.tsx
 const LettersDisplaying: React.FC<Props> = ({letters, highLetters}) => {
     return(
         <>

@@ -34,11 +34,11 @@
 #loading .loading-wrapper .logo .logo-wrapper img {
   height: 100%;
   animation-delay: 0;
-  animation-name: inline-u8e7m6j;
+  animation-name: inline-u45bk7h;
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
 }
-@keyframes inline-u8e7m6j {
+@keyframes inline-u45bk7h {
   from {
     transform: rotate(0deg);
   }
@@ -56,11 +56,11 @@
   font-size: 18px;
   margin-right: 2px;
   animation-delay: 0;
-  animation-name: inline-u8e7m7i;
+  animation-name: inline-u45bk7y;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-@keyframes inline-u8e7m7i {
+@keyframes inline-u45bk7y {
   from {
     opacity: 0;
   }
@@ -71,11 +71,11 @@
 #loading .loading-wrapper .loading-info p .dot-2 {
   margin-right: 2px;
   animation-delay: 300ms;
-  animation-name: inline-u8e7m84;
+  animation-name: inline-u45bk8p;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-@keyframes inline-u8e7m84 {
+@keyframes inline-u45bk8p {
   from {
     opacity: 0;
   }
@@ -86,11 +86,11 @@
 #loading .loading-wrapper .loading-info p .dot-3 {
   margin-right: 2px;
   animation-delay: 6500ms;
-  animation-name: inline-u8e7m90;
+  animation-name: inline-u45bk8r;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-@keyframes inline-u8e7m90 {
+@keyframes inline-u45bk8r {
   from {
     opacity: 0;
   }
@@ -109,11 +109,11 @@
   width: 0%;
   height: 8px;
   animation-delay: 0;
-  animation-name: inline-u8e7m9f;
+  animation-name: inline-u45bk9k;
   animation-duration: 3.5s;
   animation-iteration-count: infinite;
 }
-@keyframes inline-u8e7m9f {
+@keyframes inline-u45bk9k {
   from {
     width: 0;
     background-color: #8B8B8B;
@@ -370,7 +370,7 @@
   top: 100px;
   left: 50px;
   position: absolute;
-  animation-name: inline-u0olbyx;
+  animation-name: inline-u45bk4z;
   animation-duration: 3400ms;
   animation-iteration-count: 1;
   opacity: 1;
@@ -384,7 +384,7 @@
   left: 50px;
   top: 25px;
 }
-@keyframes inline-u0olbyx {
+@keyframes inline-u45bk4z {
   from {
     opacity: 0;
   }
@@ -401,12 +401,12 @@
   width: 200px;
   top: 100px;
   left: -70px;
-  animation-name: inline-u0olbzr;
+  animation-name: inline-u45bk5b;
   animation-duration: 1200ms;
   animation-iteration-count: 1;
   opacity: 0.4;
 }
-@keyframes inline-u0olbzr {
+@keyframes inline-u45bk5b {
   from {
     opacity: 0;
   }
@@ -423,12 +423,12 @@
   width: 200px;
   right: 0;
   top: 30px;
-  animation-name: inline-u0olc09;
+  animation-name: inline-u45bk61;
   animation-duration: 1800ms;
   animation-iteration-count: 1;
   opacity: 0.4;
 }
-@keyframes inline-u0olc09 {
+@keyframes inline-u45bk61 {
   from {
     opacity: 0;
   }
@@ -445,12 +445,12 @@
   width: 200px;
   top: 200px;
   right: 35px;
-  animation-name: inline-u0olc0o;
+  animation-name: inline-u45bk7e;
   animation-duration: 2600ms;
   animation-iteration-count: 1;
   opacity: 0.4;
 }
-@keyframes inline-u0olc0o {
+@keyframes inline-u45bk7e {
   from {
     opacity: 0;
   }
@@ -848,11 +848,11 @@
   transform: rotate(-17deg);
   margin-left: -15px;
   margin-top: -55px;
-  animation-name: inline-u0olbyw;
+  animation-name: inline-u45bk6m;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
-@keyframes inline-u0olbyw {
+@keyframes inline-u45bk6m {
   from {
     transform: rotate(0deg) scaleX(1.3) scaleY(1.3);
   }
