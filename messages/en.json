@@ -1,0 +1,62 @@
+{
+    "Home": {
+        "hello": "Hi",
+        "my_name": "I am Auguste",
+        "name_job": "Tiemele Fullstack",
+        "job": "Developer",
+        "job_info": "Fullstack Developer / Android Developer / Freelancer",
+        "contact_me": "Contact Me"
+    }, 
+    "Navbar": {
+        "home": "Home",
+        "about_me": "About Me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "AboutMe": {
+        "para_1": "Hi there! I'm Auguste, but you can also call me Junior Tiemele. I'm a software engineering graduate with a deep passion for all things tech and innovation. When I'm not coding or exploring the latest trends in technology, you'll probably find me diving into sports. As for hobbies, I'm a full-on geek—video games, movies, manga, comics—you name it. Basically, tech and geek culture are what keep me inspired and energized!",
+        "para_2": "I firmly believe that technology has the power to transform and simplify lives. That’s why I’m driven to develop innovative tech solutions that make a positive impact. My goal is to contribute to creating tools that address societal challenges and enhance people’s quality of life.",
+        "para_3": "If you're interested in chatting about technology, video games, sports, or work with me, feel free to reach out!",
+        "after_high_school": "After High School",
+        "now": "Now",
+        "about_me": "About Me"
+    },
+    "Skill": {
+        "skills_title": "My Skills",
+        "tools_use": "Current Tools Use",
+        "tools": "Tools Known",
+        "intermediate": "intermediate",
+        "basic": "basic",
+        "advance": "advance",
+        "expert": "expert",
+        "basic_detail": "I know basic things. Actually, I can't make complex project.",
+        "intermediate_detail": "I have little experience with that. But I can barely make a complex project.",
+        "advance_detail": "I have some experience with that. I can make complex project.",
+        "expert_detail": "I have an experience with that. I worked on a lot of projects."
+    },
+    "Project": {
+
+    },
+    "Contact": {
+        "contact_me": "Contact Me",
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "email": "Email",
+        "describe_contact": "Describe why do you contact me",
+        "email_error": "Email field empty",
+        "email_no_valid": "Email is no valid",
+        "firstname_error": "Firstname field empty",
+        "lastname_error": "Lastname field empty",
+        "describe_error": "Describe field empty",
+        "visit": "Visit",
+        "linkedin": "",
+        "github": "",
+        "instagram": "",
+        "whatsapp": "",
+        "descritpion": "description"
+    },
+    "Global": {
+        "loading": "Loading"
+    }
+}

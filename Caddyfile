@@ -1,0 +1,7 @@
+juniortiemele.dev {
+    reverse_proxy server:3000
+}
+
+www.juniortiemele.dev {
+    reverse_proxy server:3000
+}
