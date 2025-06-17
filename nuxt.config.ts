@@ -9,5 +9,10 @@ export default defineNuxtConfig({
       {code: 'en', name: 'English', file: 'en.json'},
       {code: 'fr', name: 'French', file: 'fr.json'}
     ]
-  }
+  },
+  css: [
+    '@/assets/css/main.css'
+  ],
+  ui: {
+  }, 
 })
