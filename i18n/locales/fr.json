@@ -1,11 +1,10 @@
 {
-    "welcome": "bienvenu",
+    "welcome": "Bienvenu",
     "Home": {
-        "hello": "Salut",
-        "my_name": "Je suis Auguste",
-        "name_job": "Tiemele Fullstack",
-        "job": "Développeur",
-        "job_info": "Fullstack Développeur / Android Développeur / Freelancer",
+        "hello": "Salut, Je suis",
+        "name_job": "Auguste Tiémélé",
+        "job": "Fullstack Développeur",
+        "job_info": "Fullstack Développeur Principale / Spécialiste En Apprentissage Machine",
         "contact_me": "Contactez Me"
     },
     "Navbar": {

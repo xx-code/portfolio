@@ -42,7 +42,7 @@
             </div>
 
             <div class="hamburger-btn">
-                
+               <UButton icon="i-lucide-menu" /> 
             </div>
         </div>
     </div>
@@ -56,9 +56,7 @@
         z-index: 5;
         @media (max-width: 768px) {
             flex-direction: row;
-            height: 70px;
             width: 100%;
-            position: relative;
             top: 0;
         }
     }

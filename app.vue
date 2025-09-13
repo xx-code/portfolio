@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <Navbar />
-    <Home />
-  </div>  
+  <NuxtLayout>
+    <div>
+      <Home />
+    </div>
+  </NuxtLayout>  
 </template>
