@@ -15,12 +15,12 @@
         "contact": "Contact"
     },
     "AboutMe": {
-        "para_1": "Salut ! Moi, c'est Auguste, mais tu peux aussi m'appeler Junior Tiemele. Diplômé en génie logiciel, je suis un vrai passionné d'informatique et de nouvelles technologies. Quand je ne suis pas en train de coder ou de tester les dernières innovations, je suis à fond dans le sport. Et côté loisirs ? Je suis un geek dans l'âme : jeux vidéo, films, mangas, comics... tout ce qui nourrit l'imaginaire, c'est mon truc. Bref, entre technologie et culture geek, c'est ma vibe !",
-        "para_2": "Je suis convaincu que la technologie a le potentiel de transformer et de simplifier la vie de chacun. C’est pourquoi je m’efforce de concevoir des solutions informatiques qui apportent un impact positif concret. Mon ambition est de participer à la création d’outils capables de résoudre des défis sociétaux et d’améliorer le quotidien des gens.",
-        "para_3": "Si vous avez envie de discuter technologie, jeux vidéo, sport ou travailler avec moi, n'hésitez pas à me contacter !",
+        "para_1": "Salut ! Moi, c'est *$Auguste$* (ou *$Junior Tiemele$*). Diplômé en *$génie logiciel$*, je suis un vrai passionné de *$technologie$* et d'*$innovation$*. Quand je ne code pas ou que je n'explore pas les dernières tendances *$tech$*, tu me trouveras sûrement en train de faire du *$sport$*. Et côté loisirs ? Je suis un *$geek$* assumé : *$jeux vidéo$*, *$mangas$*, *$films$*, *$comics$*... Tout ce qui nourrit l’imaginaire, c’est ma vibe !",
+        "para_2": "Je suis convaincu que la *$technologie$* peut *$transformer$* et *$simplifier$* la vie de chacun. C’est pourquoi je crée des *$solutions innovantes$* qui ont un réel *$impact positif$*. Mon ambition : concevoir des *$outils$* qui répondent à de vrais *$défis sociétaux$* et améliorent la *$qualité de vie$* des gens.",
+        "para_3": "Envie de discuter *$technologie$*, *$jeux vidéo$*, *$sport$* ou même de *$collaborer$* sur un projet ? N’hésite pas à me contacter !",
         "after_high_school": "Après le lycée",
         "now": "Maintenant",
-        "about_me": "Au sujet de moi"
+        "about_me": "À propos de moi"
     },
     "Skill": {
         "skills_title": "Mes Compétences",
