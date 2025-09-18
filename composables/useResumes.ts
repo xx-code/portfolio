@@ -68,7 +68,7 @@ const resumeData: Array<ResumeType> = [
     },
     {
         title: 'Lead developper - MTY Group',
-        startDate: new Date(2024, 9),
+        startDate: new Date(2024, 5),
         endDate: undefined,
         isCurrent: true,
         type: 'Work',

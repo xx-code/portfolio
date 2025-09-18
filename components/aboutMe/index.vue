@@ -21,7 +21,7 @@ function surline(txt: string) {
     <div id="about-me">
         <div class="flex flex-col container">
             <div class="mb-8">
-                <h1 class="text-2xl font-bold text-gray-500">{{ $t('AboutMe.about_me') }}</h1>
+                <h1 class="text-4xl font-bold text-gray-500">{{ $t('AboutMe.about_me') }}</h1>
                 <br/>
                 <div class="paragraph col-12">
                     <p class="leading-relaxed">
@@ -68,7 +68,7 @@ function surline(txt: string) {
 
 <style lang="scss" scoped>
 #about-me {
-    background-color: #0E0E10;
+    background: radial-gradient(circle at top left, #1e1e20, #0e0e10);
     color: white;
     // opacity: 0;
     transition: opacity ease-in-out 100ms;

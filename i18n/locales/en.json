@@ -24,8 +24,8 @@
     },
     "Skill": {
         "skills_title": "My Skills",
-        "tools_use": "Current Tools Use",
-        "tools": "Tools Known",
+        "tools_use": "Current Stacks",
+        "tools": "Stacks Known",
         "intermediate": "intermediate",
         "basic": "basic",
         "advance": "advance",
