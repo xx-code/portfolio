@@ -2,15 +2,6 @@
 
 function surline(txt: string) {
     const words = txt.split('*'); 
-    console.log(words)
-    // let content = ''
-    // words.forEach(word => {
-    //     if (word.startsWith("$") && word.endsWith("$"))
-    //         content += h('span', word.replaceAll('$', ''))
-    //     else 
-    //         content += word
-    // })
-
     return words
 }
 

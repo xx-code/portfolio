@@ -97,6 +97,14 @@ const data: Array<SkillType> = [
         isCurrentlyUseful: true
     },
     {
+        id: 'cplus',
+        title: 'C++',
+        description: '',
+        icon: 'i-devicon-cplusplus',
+        level: 2,
+        isCurrentlyUseful: false
+    },
+    {
         id: '15',
         title: 'FastApi',
         description: '',

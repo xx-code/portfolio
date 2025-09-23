@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "auguste-tiemele",
   "private": true,
   "type": "module",
   "scripts": {
@@ -21,6 +21,8 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/devicon": "^1.2.44",
+    "@iconify-json/lucide": "^1.2.68",
     "embedded": "^1.1.0",
     "sass": "^1.89.2"
   }

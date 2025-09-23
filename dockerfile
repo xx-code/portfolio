@@ -1,15 +1,37 @@
-FROM node:18-alpine
+FROM node:24-alpine AS base
 
+# Builder stage
+FROM base AS builder
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package*.json ./
+# Activer corepack (pour Yarn Berry)
+RUN corepack enable
 
-RUN npm install
+# Copier uniquement les fichiers nécessaires pour installer les deps
+COPY package.json yarn.lock ./
 
+# Installer les dépendances
+RUN yarn install --frozen-lockfile
+
+# Copier le reste du projet
 COPY . .
 
-RUN npm run build
+# Build Nuxt
+RUN yarn build
 
-# EXPOSE 3000
 
-CMD npm run start
+# Runner stage
+FROM base AS runner
+RUN apk add --no-cache libc6-compat curl
+WORKDIR /app
+
+# Copier uniquement le build final
+COPY --from=builder /app/.output ./
+
+ENV PORT=80
+ENV HOST=0.0.0.0
+
+EXPOSE 80
+
+CMD ["node", "server/index.mjs"]
