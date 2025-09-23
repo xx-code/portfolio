@@ -1,14 +1,18 @@
 services:
-  server:
+  web: 
+    environment:
+      - NODE_ENV=production
+    ports:
+      - 3002:80
     build:
       context: .
       dockerfile: dockerfile
-  caddy:
-    image: caddy:2.7-alpine
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
+  # caddy:
+  #   image: caddy:2.7-alpine
+  #   restart: unless-stopped 
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #     - "443:443/udp"
+  #   volumes:
+  #     - ./Caddyfile:/etc/caddy/Caddyfile
