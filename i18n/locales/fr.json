@@ -1,0 +1,62 @@
+{
+    "welcome": "Bienvenu",
+    "Home": {
+        "hello": "Salut, Je suis",
+        "name_job": "Auguste Tiémélé",
+        "job": "Fullstack Développeur",
+        "job_info": "Fullstack Développeur Principale / Spécialiste En Apprentissage Machine",
+        "contact_me": "Contactez Me"
+    },
+    "Navbar": {
+        "home": "Accueil",
+        "about_me": "Au sujet de moi",
+        "skills": "Skills",
+        "projects": "Projets",
+        "contact": "Contact"
+    },
+    "AboutMe": {
+        "para_1": "Salut ! Moi, c'est *$Auguste$* (ou *$Junior Tiemele$*). Diplômé en *$génie logiciel$*, je suis un vrai passionné de *$technologie$* et d'*$innovation$*. Quand je ne code pas ou que je n'explore pas les dernières tendances *$tech$*, tu me trouveras sûrement en train de faire du *$sport$*. Et côté loisirs ? Je suis un *$geek$* assumé : *$jeux vidéo$*, *$mangas$*, *$films$*, *$comics$*... Tout ce qui nourrit l’imaginaire, c’est ma vibe !",
+        "para_2": "Je suis convaincu que la *$technologie$* peut *$transformer$* et *$simplifier$* la vie de chacun. C’est pourquoi je crée des *$solutions innovantes$* qui ont un réel *$impact positif$*. Mon ambition : concevoir des *$outils$* qui répondent à de vrais *$défis sociétaux$* et améliorent la *$qualité de vie$* des gens.",
+        "para_3": "Envie de discuter *$technologie$*, *$jeux vidéo$*, *$sport$* ou même de *$collaborer$* sur un projet ? N’hésite pas à me contacter !",
+        "after_high_school": "Après le lycée",
+        "now": "Maintenant",
+        "about_me": "À propos de moi"
+    },
+    "Skill": {
+        "skills_title": "Mes Compétences",
+        "tools_use": "Outils Utilisé Actuellement",
+        "tools": "Outils Maitrisé",
+        "intermediate": "intermédiare",
+        "basic": "basique",
+        "advance": "avancer",
+        "expert": "expert",
+        "basic_detail": "Je connais des choses de base. En fait, je ne peux pas faire de projet complexe.",
+        "intermediate_detail": "J'ai peu d'expérience avec ça. Mais je peux à peine faire un projet complexe",
+        "advance_detail": "J'ai une certaine expérience avec ça. Je peux faire des projets complexes",
+        "expert_detail": "J'ai une expérience avec ça. J'ai travaillé sur beaucoup de projets."
+    },
+    "Project": {
+
+    },
+    "Contact": {
+        "contact_me": "Contactez Me",
+        "firstname": "Prenom",
+        "lastname": "Nom",
+        "email": "Email",
+        "describe_contact": "Decrivez pourquoi vous me contactez",
+        "email_error": "Veuillez inserer votre email",
+        "email_no_valid": "Votre email est invalide",
+        "firstname_error": "Veuillez inserer votre prenom",
+        "lastname_error": "Veuillez inserer votre nom",
+        "describe_error": "Veuillez decrire votre problem",
+        "visit": "Visité",
+        "linkedin": "",
+        "github": "",
+        "instagram": "",
+        "whatsapp": "",
+        "descritpion": "description"
+    },
+    "Global": {
+        "loading": "Chargement"
+    }
+}

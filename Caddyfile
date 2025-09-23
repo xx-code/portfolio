@@ -1,7 +1,7 @@
-juniortiemele.dev {
+augustetiemele.dev {
     reverse_proxy server:3000
 }
 
-www.juniortiemele.dev {
+www.augustetiemele.dev {
     reverse_proxy server:3000
 }
