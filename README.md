@@ -1,75 +1,58 @@
-# Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Nuxt Portfolio - Deployment Guide
 
-## Setup
+This project uses Nuxt 3 and can be deployed easily in production using Docker.
 
-Make sure to install dependencies:
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (for local development)
+- [Yarn](https://yarnpkg.com/) (recommended)
+- [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
+
+## Install dependencies
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
 yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Local development
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
 yarn dev
-
-# bun
-bun run dev
 ```
+Access the app at [http://localhost:3000](http://localhost:3000).
 
-## Production
-
-Build the application for production:
+## Build for production
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
 yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## Deploy with Docker
 
-```bash
-# npm
-npm run preview
+1. **Build and start the container:**
 
-# pnpm
-pnpm preview
+	```bash
+	docker-compose up --build
+	```
 
-# yarn
-yarn preview
+	The app will be available at [http://localhost:3002](http://localhost:3002).
 
-# bun
-bun run preview
-```
+2. **Docker structure:**
+	- Nuxt build is done in a lightweight Alpine image.
+	- Port 3002 (host) is mapped to port 80 in the container.
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+3. **Stop the container:**
+
+	```bash
+	docker-compose down
+	```
+
+## Environment variables
+
+- `NODE_ENV=production` (already set in `docker-compose.yaml`)
+- `PORT=80` and `HOST=0.0.0.0` (set in Dockerfile)
+
+## Nuxt Documentation
+
+- [Nuxt - Deployment Guide](https://nuxt.com/docs/getting-started/deployment)
