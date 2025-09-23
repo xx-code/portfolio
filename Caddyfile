@@ -1,7 +1,0 @@
-augustetiemele.dev {
-    reverse_proxy server:3000
-}
-
-www.augustetiemele.dev {
-    reverse_proxy server:3000
-}
