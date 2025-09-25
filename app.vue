@@ -8,6 +8,7 @@
       <Home />
       <AboutMe />
       <Skills />
+      <Project />
     </div>
   </NuxtLayout>  
 </template>
