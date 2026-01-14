@@ -4,6 +4,14 @@ services:
       - NODE_ENV=production
     ports:
       - 3002:80
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'        # Maximum 50% of a single CPU core
+          memory: 512M        # Maximum RAM allowed
+        reservations:
+          cpus: '0.25'        # Guaranteed CPU amount
+          memory: 128M
     build:
       context: .
       dockerfile: dockerfile
