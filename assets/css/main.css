@@ -2,7 +2,14 @@
 @import "@nuxt/ui";
 
 @theme {
-    --font-sans: 'montserrat', sans-serif;
+  --surface: #0D1117;
+  --border: #1C2333;
+  --accent: #00FFA3;
+  --accent2: #4D9EFF;
+  --muted: #3D4A5C;
+  --text: #C9D1D9;
+  --text-dim: #586069;
+  --white: #F0F6FC;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,14 +32,40 @@
 
 html, body { 
   height: 100%;
-  font-size: 16px;
   margin: 0;
   padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html::before, body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0,255,163,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,163,0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg: #080A0E;
+  --surface: #0D1117;
+  --border: #1C2333;
+  --accent: #00FFA3;
+  --accent2: #4D9EFF;
+  --muted: #3D4A5C;
+  --text: #C9D1D9;
+  --text-dim: #586069;
+  --white: #F0F6FC;
 }
 

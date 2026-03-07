@@ -1,11 +1,13 @@
 {
     "welcome": "Bienvenu",
-    "Home": {
-        "hello": "Salut, Je suis",
-        "name_job": "Auguste Tiémélé",
-        "job": "Fullstack Développeur",
-        "job_info": "Fullstack Développeur Principale / Spécialiste En Apprentissage Machine",
-        "contact_me": "Contactez Me"
+    "home": {
+        "hello_message": "Salut, Moi c'est Auguste Tiémélé",
+        "fullstack_architect_label": "FullStak Architect",
+        "product_engineer_label": "Product Engineer",
+        "product_builder_label": "Product Builder",
+        "profile_label": "Mon Profil",
+        "project_label": "Mes Projets",
+        "bloc_label": "Le Blog"
     },
     "Navbar": {
         "home": "Accueil",
@@ -56,7 +58,8 @@
         "whatsapp": "",
         "descritpion": "description"
     },
-    "Global": {
-        "loading": "Chargement"
+    "global": {
+        "loading": "Chargement",
+        "now": "Maintenant"
     }
 }
