@@ -7,6 +7,7 @@
         "product_builder_label": "Product Builder",
         "profile_label": "Mon Profil",
         "project_label": "Mes Projets",
+        "project_skill": "Mes Compétences",
         "bloc_label": "Le Blog"
     },
     "Navbar": {

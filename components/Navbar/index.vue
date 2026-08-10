@@ -19,7 +19,7 @@ const { onClick, primaryPage } = defineProps<{
         <CtaButton 
             :is-primary="primaryPage === 'Profile'" 
             icon="i-lucide-contact"
-            :label="$t('home.profile_label')" 
+            :label="$t('home.project_skill')" 
             @click="onClick('Profile')"/>
 
         <CtaButton 
