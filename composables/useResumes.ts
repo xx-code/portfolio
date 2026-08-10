@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+export type TypeResume = 'work' | 'study' 
 
 export interface ResumeType {
     title: string,
@@ -6,135 +6,125 @@ export interface ResumeType {
     startDate: Date,
     endDate?: Date,
     isCurrent: boolean,
-    type: string
+    place: string,
+    type: TypeResume,
+    tags: {title: string, color: string}[]
 }
 
 const resumeData: Array<ResumeType> = [
     {
-        title: 'Orion',
+        title: 'Junior FullStack',
         startDate: new Date(2018, 6),
         endDate: new Date(2018, 9),
         isCurrent: false,
-        type: 'Work',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: 'Orion',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'work',
+        tags: [
+            {title: 'Reactjs/React-Native', color: ''},
+            {title: 'TypeScript', color: ''},
+        ]
     },
     {
         title: 'Bachelor in computer application',
         startDate: new Date(2016, 10),
         endDate: new Date(2020, 10),
         isCurrent: false,
-        type: 'Education',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: 'Amity University',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'study',
+        tags: []
     },
     {
-        title: 'Freelancer',
+        title: 'FullStack Freelancer',
         startDate: new Date(2020, 9),
         endDate: new Date(2022, 1),
         isCurrent: false,
-        type: 'Work',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur'
+        place: 'a mon compte',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur',
+        type: 'work',
+        tags: [
+            {title: 'Reactjs/React-Native', color: ''},
+            {title: 'TypeScript', color: ''},
+        ]
     },
     {
-        title: 'TechnoDream',
+        title: 'Junior Android developper',
         startDate: new Date(2017, 1),
         endDate: new Date(2017, 10),
         isCurrent: false,
-        type: 'Work',
-        detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: 'TechnoDream',
+        detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'work',
+        tags: [
+            {title: 'Java/Android', color: ''},
+            {title: 'Reactjs', color: ''},
+        ]
     },
     {
-        title: 'Stagaire Safir a Consulting',
+        title: 'Stagaire Consultant',
         startDate: new Date(2021, 1),
         endDate: new Date(2021, 10),
         isCurrent: false,
-        type: 'Work',
-        detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: ' Safir a Consulting',
+        detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'work',
+        tags: [
+            {title: 'Sap Application Integration', color: ''},
+            {title: 'XML', color: ''},
+            {title: 'SQLServer', color: ''},
+            {title: 'Oracle', color: ''},
+            {title: 'Sap/Hana', color: ''},
+        ]
     },
     {
         title: 'Maitrise Informatique Intelligence Artificiel',
         startDate: new Date(2021, 7),
         endDate: new Date(2024, 4),
         isCurrent: false,
-        type: 'Education',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: 'Universite Laval',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'study',
+        tags: [
+            {title: 'Machine Learning', color: ''},
+            {title: 'Renforcing Learning', color: ''},
+            {title: 'Python/Pytorch', color: ''},
+            {title: 'Jupiter/Notebook', color: ''},
+        ]
     },
     {
-        title: 'Stagaire In Intelligence Artificiel - MTY Group',
+        title: 'Stagaire In Intelligence Artificiel',
         startDate: new Date(2023, 9),
         endDate: new Date(2024, 4),
         isCurrent: false,
-        type: 'Work',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: 'MTY Group Inc.',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'study',
+        tags: [
+            {title: 'Python/Pytorch', color: ''},
+            {title: 'Jupiter/Notebook', color: ''},
+            {title: 'Recommandation System', color: ''},
+        ]
     },
     {
-        title: 'Lead developper - MTY Group',
+        title: 'Lead developper',
         startDate: new Date(2024, 5),
         endDate: undefined,
         isCurrent: true,
-        type: 'Work',
-        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro'
+        place: 'MTY Group Inc.',
+        detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
+        type: 'work',
+        tags: [
+            {title: 'System Design', color: ''},
+            {title: 'Code Arch/Clean Arch', color: ''},
+            {title: 'Dotnet/Aps.net', color: ''},
+            {title: 'Vue/Nuxt.js', color: ''},
+            {title: 'Swift/SwiftUi', color: ''},
+            {title: 'CI/CD', color: ''},
+        ]
     },
 ];
 
-
-
-
-export interface TimeLineResumeType {
-    id: string
-    title: string,
-    content: string,
-    color: string
-    isCurrent: boolean,
-    startPointInPercent: number
-    widthBarInPercent: number
-    timeInYear: {
-        startTime: string,
-        endTime: string
-    }
-    type: string
-}
-
-
-const colors = ["#FFB801", "#47DE3A", "#0C83FD", "#ed1e78"];
-
-export default function useResumes(): Ref<TimeLineResumeType[]> {
-    const { t } = useI18n();
-    const resumes = ref<TimeLineResumeType[]>([])
-
-    const sortedData = resumeData.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
-    const dayDate = new Date(Date.now());
-    const startDate = sortedData[0].startDate;
-    const totalWeeks = dayjs(startDate).diff(dayjs(dayDate), 'week')
-
-    sortedData[sortedData.length - 1].startDate.getFullYear();
-    let pickerIndex = 0;
-    sortedData.forEach((data, index) => {
-        const end = data.endDate ? data.endDate : dayDate;
-
-        const timeWidth = dayjs(data.startDate).diff(dayjs(end), 'week') * 100 / totalWeeks;
-        // if (data.startDate == end) {
-        //     width = ((end.getMonth() - data.startDate.getMonth()) * 0.1) * 100 / totalWeeks;
-        // }
-
-        // Build resume info
-        const info: TimeLineResumeType = {
-            id: index.toString(),
-            title: data.title,
-            content: data.detail,
-            color: colors[pickerIndex],
-            startPointInPercent: Math.abs(((dayjs(startDate).diff(dayjs(data.startDate), 'week') * 100) / totalWeeks)),
-            widthBarInPercent: timeWidth,
-            timeInYear: {
-                startTime: data.startDate.toISOString(),
-                endTime: data.endDate ? data.endDate.toISOString() : t('now')
-            },
-            isCurrent: false,
-            type: data.type
-        };
-
-        pickerIndex++;
-        pickerIndex = pickerIndex > 3 ? 0 : pickerIndex;
-        resumes.value.push(info);
-    });
-    return resumes
+export default function useResumes(): ResumeType[] {
+    return resumeData.sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
 }

@@ -1,11 +1,14 @@
 {
     "welcome": "welcome",
-    "Home": {
-        "hello": "Hi, I am",
-        "name_job": "Auguste Tiemele",
-        "job": "Fullstack Developer",
-        "job_info": "Lead Fullstack Developer / Machine Learning Specialist",
-        "contact_me": "Contact Me"
+    "home": {
+        "hello_message": "Hello, I'm Auguste Tiemele",
+        "fullstack_architect_label": "FullStak Architect",
+        "product_engineer_label": "Product Engineer",
+        "product_builder_label": "Product Builder",
+        "profile_label": "Aboute me",
+        "project_label": "My Projects",
+        "project_skill": "My Skills",
+        "bloc_label": "The Blog"
     }, 
     "Navbar": {
         "home": "Home",
@@ -56,7 +59,8 @@
         "whatsapp": "",
         "descritpion": "description"
     },
-    "Global": {
-        "loading": "Loading"
+    "global": {
+        "loading": "Loading",
+        "now": "Now"
     }
 }
