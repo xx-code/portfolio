@@ -21,8 +21,8 @@ const resumeData: Array<ResumeType> = [
         detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
         type: 'work',
         tags: [
-            {title: 'Reactjs/React-Native', color: ''},
-            {title: 'TypeScript', color: ''},
+            { title: 'Reactjs/React-Native', color: '#61DAFB' },
+            { title: 'TypeScript', color: '#3178C6' },
         ]
     },
     {
@@ -44,8 +44,8 @@ const resumeData: Array<ResumeType> = [
         detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur',
         type: 'work',
         tags: [
-            {title: 'Reactjs/React-Native', color: ''},
-            {title: 'TypeScript', color: ''},
+            { title: 'Reactjs/React-Native', color: '#61DAFB' },
+            { title: 'TypeScript', color: '#3178C6' },
         ]
     },
     {
@@ -57,8 +57,8 @@ const resumeData: Array<ResumeType> = [
         detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
         type: 'work',
         tags: [
-            {title: 'Java/Android', color: ''},
-            {title: 'Reactjs', color: ''},
+            { title: 'Java/Android', color: '#3DDC84' },
+            { title: 'Reactjs', color: '#61DAFB' },
         ]
     },
     {
@@ -70,11 +70,11 @@ const resumeData: Array<ResumeType> = [
         detail: 'Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
         type: 'work',
         tags: [
-            {title: 'Sap Application Integration', color: ''},
-            {title: 'XML', color: ''},
-            {title: 'SQLServer', color: ''},
-            {title: 'Oracle', color: ''},
-            {title: 'Sap/Hana', color: ''},
+            { title: 'Sap Application Integration', color: '#008FD3' },
+            { title: 'XML', color: '#E34F26' },
+            { title: 'SQLServer', color: '#CC292B' },
+            { title: 'Oracle', color: '#F80000' },
+            { title: 'Sap/Hana', color: '#008FD3' },
         ]
     },
     {
@@ -86,10 +86,10 @@ const resumeData: Array<ResumeType> = [
         detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
         type: 'study',
         tags: [
-            {title: 'Machine Learning', color: ''},
-            {title: 'Renforcing Learning', color: ''},
-            {title: 'Python/Pytorch', color: ''},
-            {title: 'Jupiter/Notebook', color: ''},
+            { title: 'Machine Learning', color: '#FF6F00' },
+            { title: 'Renforcing Learning', color: '#8E44AD' },
+            { title: 'Python/Pytorch', color: '#EE4C2C' },
+            { title: 'Jupiter/Notebook', color: '#F37626' },
         ]
     },
     {
@@ -101,9 +101,9 @@ const resumeData: Array<ResumeType> = [
         detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
         type: 'study',
         tags: [
-            {title: 'Python/Pytorch', color: ''},
-            {title: 'Jupiter/Notebook', color: ''},
-            {title: 'Recommandation System', color: ''},
+            { title: 'Python/Pytorch', color: '#EE4C2C' },
+            { title: 'Jupiter/Notebook', color: '#F37626' },
+            { title: 'Recommandation System', color: '#008080' },
         ]
     },
     {
@@ -115,12 +115,12 @@ const resumeData: Array<ResumeType> = [
         detail: 'Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro. spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro',
         type: 'work',
         tags: [
-            {title: 'System Design', color: ''},
-            {title: 'Code Arch/Clean Arch', color: ''},
-            {title: 'Dotnet/Aps.net', color: ''},
-            {title: 'Vue/Nuxt.js', color: ''},
-            {title: 'Swift/SwiftUi', color: ''},
-            {title: 'CI/CD', color: ''},
+            { title: 'System Design', color: '#4A90E2' },
+            { title: 'Code Arch/Clean Arch', color: '#10B981' },
+            { title: 'Dotnet/Aps.net', color: '#512BD4' },
+            { title: 'Vue/Nuxt.js', color: '#4FC08D' },
+            { title: 'Swift/SwiftUi', color: '#F05138' },
+            { title: 'CI/CD', color: '#2563EB' },
         ]
     },
 ];
