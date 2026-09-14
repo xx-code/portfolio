@@ -40,13 +40,16 @@ function interpolateColor(percentage: number) {
         </div>
         <p class="skill-card-sub">{{ subtitle }}</p>
 
-        <div v-for="skill in skills" :key="skill.name" class="skill-item">
-        <span class="skill-name">{{ skill.name }}</span>
-        <div class="skill-bar-track">
-            <div class="skill-bar-fill" 
-                :style="{width:`${skill.percentage}%`, backgroundColor: interpolateColor(skill.percentage)}" />
+        <div v-for="skill in skills" :key="skill.name" class="flex flex-col">
+            <div class="flex justify-between items-center">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ getLevel(skill.percentage) }}</span>
             </div>
-        <span class="skill-level">{{ getLevel(skill.percentage) }}</span>
+            
+            <div class="skill-bar-track">
+                <div class="skill-bar-fill" 
+                    :style="{width:`${skill.percentage}%`, backgroundColor: interpolateColor(skill.percentage)}" />
+            </div>
         </div>
     </Terminal>
     
@@ -108,6 +111,7 @@ function interpolateColor(percentage: number) {
   .skill-name {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: clamp(11px, 1.5vw, 13px);
+    font-weight: 400;
     color: var(--text);
     flex: 1;
     white-space: nowrap;
@@ -116,7 +120,7 @@ function interpolateColor(percentage: number) {
   }
 
   .skill-bar-track {
-    width: 40px;
+    width: 100%;
     height: 3px;
     background: var(--border);
     border-radius: 2px;

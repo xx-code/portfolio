@@ -27,7 +27,7 @@ const { title } = defineProps<{
     overflow: hidden;
     position: relative;
     .terminal-bar {
-        padding: 12px 16px;
+        padding: 10px 16px;
         background: #161B22;
         border-bottom: 1px solid var(--border);
         display: flex;
