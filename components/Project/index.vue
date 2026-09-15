@@ -1,47 +1,14 @@
 <script setup lang="ts">
 import type { PageType } from '~/app.vue';
 
-
 const emit = defineEmits<{
     (e: 'navigate', page: PageType): void
 }>()
-// Définition du type Project
-// interface Project {
-//     id: string
-//     title: string
-//     description: string
-//     imageUrl?: string
-//     link?: string
-//     techs?: string[]
-// }
 
-// Données statiques (remplace plus tard par un fetch si tu veux)
-// const projects: Project[] = [
-//     {
-//         id: 'p1',
-//         title: 'Portfolio Nuxt 3',
-//         description: 'Un site personnel moderne construit avec Nuxt 3 et TailwindCSS.',
-//         imageUrl: '/images/projet1.png',
-//         link: '#',
-//         techs: ['Nuxt 3', 'TailwindCSS', 'TypeScript'],
-//     },
-//     {
-//         id: 'p2',
-//         title: 'API Machine Learning',
-//         description: 'API de ML performante pour la classification d’images.',
-//         imageUrl: '/images/projet2.png',
-//         link: '#',
-//         techs: ['Python', 'FastAPI', 'PyTorch'],
-//     },
-//     {
-//         id: 'p3',
-//         title: 'App Mobile',
-//         description: 'Application mobile cross-platform en Flutter.',
-//         imageUrl: '/images/projet3.png',
-//         link: '#',
-//         techs: ['Flutter', 'Dart'],
-//     },
-// ]
+const { locale, t } = useI18n()
+
+const dateNow = ref(new Date())
+
 </script>
 
 <template>
@@ -50,11 +17,39 @@ const emit = defineEmits<{
             <Navbar primary-page="Projects" :on-click="page => emit('navigate', page)" />
         </div>
 
-        <div class="flex justify-center items-center h-full">
-            <h1 class="text-5xl">
-                (Coming Soon)
-            </h1>
+        <div class="flex flex-col w-full h-215 bg-cyan-500 rounded-2xl">
+            <div class="flex px-5 py-1 bg-black/25 w-full">
+                <p>portefolio_os</p>
+
+                <div class="flex-1 text-center">
+                    <p>{{ formatDateMonth(locale, dateNow) }}</p>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <UIcon name="i-lucide-wifi"/>
+                    <UIcon name="i-lucide-volume-2" />
+                    <UIcon name="i-lucide-battery-full" />
+                </div>
+            </div> 
+
+            <div class="flex-1 relative">
+                <ProjectExe 
+                    title="Agni"
+                />
+            </div>
+
+            <div class="flex justify-center pb-4">
+                <div class="flex items-center px-5 py-1 bg-black/25 rounded-2xl">
+                    <div class="h-[80%] w-[1px] bg-gray-400" orientation="vertical"/>
+                    <UButton 
+                        icon="i-lucide-layout-grid"
+                        size="xl"
+                    />
+                </div>
+            </div>
         </div>
+
+
     </div>
     
 </template>
