@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/fonts',
     '@nuxt/image',
+    '@vueuse/nuxt',
   ],
   ssr: false,
   i18n: {
