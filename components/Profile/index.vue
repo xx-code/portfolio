@@ -15,16 +15,17 @@ const resumes = useResumes()
             <Navbar primary-page="Profile" :on-click="page => emit('navigate', page)" />
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full tracking-widest">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full tracking-widest">
             <div class="col-auto h-full overflow-auto custom-scrollbar">
                 <div class="section-label">// work history</div>
                 <ProfileWorkCard 
-                    v-for="resume in resumes"
+                    v-for="(resume, index) in resumes"
                     :key="resume.title"
                     :title="resume.title" 
                     :place="resume.place" 
                     :start-date="resume.startDate"
                     :end-date="resume.endDate"
+                    :default-open="index == 0"
                     :tags="resume.tags.map(i => ({ title: i.title, color: i.color}))" />
             </div>
             <div class="col-auto h-full overflow-auto custom-scrollbar">
