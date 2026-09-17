@@ -9,7 +9,8 @@ export interface ProjectLink {
 const props = defineProps<{
     title: string
     icon: string
-    description: string
+    descriptionFr: string
+    descriptionEn: string
     tags: string[]
     links?: ProjectLink[]
     x?: number
@@ -17,6 +18,7 @@ const props = defineProps<{
 }>()
 
 const openWindow = ref(false)
+const { locale } = useI18n()
 
 // Shared counter injected from the desktop (index.vue) so any window
 // clicked/opened jumps above the others instead of z-index fighting.
@@ -72,7 +74,7 @@ function open() {
                 {{ title }}
                 </h3>
                 <p class="text-sm text-neutral-500 leading-relaxed mb-4">
-                {{ description }}
+                {{ locale == 'fr' ? descriptionFr : descriptionEn }}
                 </p>
 
                 <div v-if="tags?.length" class="flex flex-wrap gap-1.5 mb-4">

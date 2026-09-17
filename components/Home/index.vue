@@ -65,7 +65,7 @@ const currentRole = locale.value === 'fr' ? "Developpeur Principal — MTY Group
                     <span>github.com/xx-code</span>
                 </a>
                 <span class="links-sep">/</span>
-                <a href="https://www.linkedin.com/in/auguste-aka-junior-tiemele" target="_blank" class="link-item">
+                <a href="https://linkedin.com/in/auguste-aka-junior-tiemele-324701160" target="_blank" class="link-item">
                     <UIcon name="i-lucide-linkedin" class="w-4 h-4" />
                     <span>linkedin.com</span>
                 </a>

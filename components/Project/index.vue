@@ -15,39 +15,17 @@ provide('desktopZIndex', desktopZIndex)
 
 const projects = [
     {
-        title: 'devops_dash',
-        icon: 'i-lucide-server',
-        description:
-        'Monitoring temps réel pour clusters K8s avec alerting configurable.',
-        tags: ['Vue/Nuxt', 'Docker', 'Grafana'],
+        title: 'agni',
+        icon: 'i-lucide-piggy-bank',
+        descriptionEn: 'Agni is my personal finance management application. It helps me track my personal expenses and make informed financial decisions.',
+        descriptionFr: 'Agni est mon application pour gérer mes finances personnelles. Cette application me permet de tracer mes dépenses personnelles et prendre des decisions correcte avec mes finances.',
+        tags: ['Vue/Nuxt', 'Kotlin', 'Python', 'Plaid'],
         links: [
-        { label: 'source', icon: 'i-lucide-github', url: 'https://github.com' },
-        { label: 'demo', icon: 'i-lucide-external-link', url: 'https://example.com' },
+        { label: 'source', icon: 'i-lucide-github', url: 'https://github.com/xx-code/agni-think' },
+        { label: 'demo', icon: 'i-lucide-external-link', url: 'https://budget-demo.augustetiemele.dev' },
         ],
         x: 220,
         y: 70,
-    },
-    {
-        title: 'ui_kit_v2',
-        icon: 'i-lucide-component',
-        description: 'Librairie de composants Vue partagée entre les projets front.',
-        tags: ['Vue', 'TypeScript', 'Storybook'],
-        links: [
-        { label: 'source', icon: 'i-lucide-github', url: 'https://github.com' },
-        ],
-        x: 260,
-        y: 110,
-    },
-    {
-        title: 'reco_engine',
-        icon: 'i-lucide-bot',
-        description: 'Système de recommandation basé sur du collaborative filtering.',
-        tags: ['Python', 'PyTorch', 'Jupyter'],
-        links: [
-        { label: 'source', icon: 'i-lucide-github', url: 'https://github.com' },
-        ],
-        x: 300,
-        y: 150,
     },
 ]
 </script>
